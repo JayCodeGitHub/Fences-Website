@@ -1,8 +1,10 @@
 import * as React from 'react';
+import Navigation from '../components/Navigation/Navigation';
 
 function OfertaPage() {
   return (
     <div>
+      <Navigation />
       <h1>Oferta</h1>
     </div>
   );
