@@ -4,7 +4,6 @@ import { Link } from 'gatsby';
 function Navigation() {
   return (
     <div>
-      <h1>Navigation</h1>
       <Link to="/">Home</Link>
       <Link to="/O-Nas/">O nas</Link>
       <Link to="/Oferta/">Oferta</Link>

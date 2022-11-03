@@ -1,12 +1,11 @@
 import * as React from 'react';
-import Navigation from '../components/Navigation/Navigation';
+import { MainTemplate } from '../templates/MainTemplate';
 
 function ObszarDzialaniaPage() {
   return (
-    <div>
-      <Navigation />
+    <MainTemplate>
       <h1>Obszar działania</h1>
-    </div>
+    </MainTemplate>
   );
 }
 

@@ -1,12 +1,11 @@
 import * as React from 'react';
-import Navigation from '../components/Navigation/Navigation';
+import { MainTemplate } from '../templates/MainTemplate';
 
 function OnasPage() {
   return (
-    <div>
-      <Navigation />
+    <MainTemplate>
       <h1>O-nas</h1>
-    </div>
+    </MainTemplate>
   );
 }
 
