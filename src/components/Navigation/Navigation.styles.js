@@ -28,7 +28,7 @@ export const ContactItemsWrapper = styled.div`
         font-size: ${({ theme }) => theme.font.size.xs};
         p {
             margin: 0;
-            color: black;
+        color: ${({ theme }) => theme.black};
         }  
         span {
             display: flex;
@@ -53,9 +53,13 @@ export const Wrapper = styled.div`
 `
 export const LogoWrapper = styled.span`
     font-size: ${({ theme }) => theme.font.size.s};
+    z-index: 10;
     a {
         color: ${({ theme }) => theme.primary};
         text-decoration: none;
+    }
+    ${({ theme }) => theme.mq.desktop} {
+        font-size: ${({ theme }) => theme.font.size.s};
     }
 `
 
@@ -71,7 +75,7 @@ export const StyledNavigation = styled.ul`
 
 export const NavigationItem = styled.li`
     padding: 1rem;
-    font-size: ${({ theme }) => theme.font.size.xs};
+    font-size: ${({ theme }) => theme.font.size.s};
     a {
         transition: color 0.2s ease-in-out;
         color: black;
@@ -81,7 +85,10 @@ export const NavigationItem = styled.li`
         }  
         &:hover {
             color: ${({ theme }) => theme.primary};
+        }
     }
+    ${({ theme }) => theme.mq.desktop} {
+        font-size: ${({ theme }) => theme.font.size.xs};
     }
 `
 
@@ -128,6 +135,47 @@ export const Hamburger = styled.div`
     }
 `
 export const StyledMobileNavigation = styled.div`
-        display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    background-color: ${({ theme }) => theme.lightGrey};
+    padding: 15vh 0 0 0;
+    transition: transform 0.1s ease-in-out;
+    transform: translateY(${({ isOpen }) => (isOpen ? '0' : '+100%')});
+    ul {
+        padding: 0;
+        width: 100%;
+        height: 70%;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+`
 
+export const MobileContactItemsWrapper = styled.div`
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 4vh 0 4vh 0;
+    p {
+        margin: 0;
+            color: black;
+        font-size: ${({ theme }) => theme.font.size.xs};
+    }  
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+            height: 25px;
+        }
+    }
 `
