@@ -15,6 +15,29 @@ import {
 import PhoneIcon from '../../assets/icons/PhoneIcon.svg';
 import MailIcon from '../../assets/icons/MailIcon.svg';
 
+const NavigationItems = [
+  {
+    name: 'O nas',
+    href: '/O-Nas/',
+  },
+  {
+    name: 'Oferta',
+    href: '/Oferta/',
+  },
+  {
+    name: 'Obszar Działania',
+    href: '/Obszar-Dzialania',
+  },
+  {
+    name: 'Realizacje',
+    href: '/Realizacje',
+  },
+  {
+    name: 'Kontakt',
+    href: '/Kontakt',
+  },
+];
+
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -34,31 +57,13 @@ function Navigation() {
           <Link to="/">Logo</Link>
         </LogoWrapper>
         <StyledNavigation>
-          <NavigationItem>
-            <Link to="/O-Nas/" activeClassName="active">
-              O nas
-            </Link>
-          </NavigationItem>
-          <NavigationItem>
-            <Link to="/Oferta/" activeClassName="active">
-              Oferta
-            </Link>
-          </NavigationItem>
-          <NavigationItem>
-            <Link to="/Obszar-Dzialania" activeClassName="active">
-              Obszar Działania
-            </Link>
-          </NavigationItem>
-          <NavigationItem>
-            <Link to="/Realizacje" activeClassName="active">
-              Realizacje
-            </Link>
-          </NavigationItem>
-          <NavigationItem>
-            <Link to="/Kontakt" activeClassName="active">
-              Kontakt
-            </Link>
-          </NavigationItem>
+          {NavigationItems.map(({ name, href }) => (
+            <NavigationItem>
+              <Link to={href} activeClassName="active">
+                {name}
+              </Link>
+            </NavigationItem>
+          ))}
         </StyledNavigation>
         <HamburgerWrapper onClick={() => setIsOpen(!isOpen)}>
           <Hamburger isOpen={isOpen} />
@@ -66,31 +71,13 @@ function Navigation() {
       </Wrapper>
       <StyledMobileNavigation isOpen={isOpen}>
         <ul>
-          <NavigationItem onClick={() => setIsOpen(false)}>
-            <Link to="/O-Nas/" activeClassName="active">
-              O nas
-            </Link>
-          </NavigationItem>
-          <NavigationItem onClick={() => setIsOpen(false)}>
-            <Link to="/Oferta/" activeClassName="active">
-              Oferta
-            </Link>
-          </NavigationItem>
-          <NavigationItem onClick={() => setIsOpen(false)}>
-            <Link to="/Obszar-Dzialania" activeClassName="active">
-              Obszar Działania
-            </Link>
-          </NavigationItem>
-          <NavigationItem onClick={() => setIsOpen(false)}>
-            <Link to="/Realizacje" activeClassName="active">
-              Realizacje
-            </Link>
-          </NavigationItem>
-          <NavigationItem onClick={() => setIsOpen(false)}>
-            <Link to="/Kontakt" activeClassName="active">
-              Kontakt
-            </Link>
-          </NavigationItem>
+          {NavigationItems.map(({ name, href }) => (
+            <NavigationItem>
+              <Link to={href} activeClassName="active">
+                {name}
+              </Link>
+            </NavigationItem>
+          ))}
         </ul>
         <MobileContactItemsWrapper>
           <span>
