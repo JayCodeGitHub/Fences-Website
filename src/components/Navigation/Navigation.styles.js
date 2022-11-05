@@ -2,8 +2,10 @@ import styled from "styled-components";
 
 export const OuterWrapper = styled.nav`
     width: 100%;
-    background-color: blue;
     padding: 0 5vw;
+    position: fixed;
+    left: 0;
+    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
