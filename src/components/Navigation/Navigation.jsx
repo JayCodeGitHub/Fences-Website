@@ -12,31 +12,9 @@ import {
   StyledMobileNavigation,
   MobileContactItemsWrapper,
 } from './Navigation.styles';
+import { NavigationItems } from '../../assets/items/NavigationItems/NavigationItems';
 import PhoneIcon from '../../assets/icons/PhoneIcon.svg';
 import MailIcon from '../../assets/icons/MailIcon.svg';
-
-const NavigationItems = [
-  {
-    name: 'O nas',
-    href: '/O-Nas/',
-  },
-  {
-    name: 'Oferta',
-    href: '/Oferta/',
-  },
-  {
-    name: 'Obszar Działania',
-    href: '/Obszar-Dzialania',
-  },
-  {
-    name: 'Realizacje',
-    href: '/Realizacje',
-  },
-  {
-    name: 'Kontakt',
-    href: '/Kontakt',
-  },
-];
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
