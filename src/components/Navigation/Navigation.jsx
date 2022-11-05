@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import {
   OuterWrapper,
@@ -7,11 +7,15 @@ import {
   LogoWrapper,
   StyledNavigation,
   NavigationItem,
+  HamburgerWrapper,
+  Hamburger,
+  StyledMobileNavigation,
 } from './Navigation.styles';
 import PhoneIcon from '../../assets/icons/PhoneIcon.svg';
 import MailIcon from '../../assets/icons/MailIcon.svg';
 
 function Navigation() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <OuterWrapper>
       <ContactItemsWrapper>
@@ -55,6 +59,10 @@ function Navigation() {
             </Link>
           </NavigationItem>
         </StyledNavigation>
+        <HamburgerWrapper onClick={() => setIsOpen(!isOpen)}>
+          <Hamburger isOpen={isOpen} />
+        </HamburgerWrapper>
+        <StyledMobileNavigation></StyledMobileNavigation>
       </Wrapper>
     </OuterWrapper>
   );

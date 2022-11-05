@@ -60,10 +60,13 @@ export const LogoWrapper = styled.span`
 `
 
 export const StyledNavigation = styled.ul`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
+    display: none;
+    ${({ theme }) => theme.mq.desktop} {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+    }
 `
 
 export const NavigationItem = styled.li`
@@ -80,4 +83,51 @@ export const NavigationItem = styled.li`
             color: ${({ theme }) => theme.primary};
     }
     }
+`
+
+export const HamburgerWrapper = styled.button`
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    background-color: transparent;
+    z-index: 10;
+    ${({ theme }) => theme.mq.desktop} {
+        display: none;
+    }
+`
+
+export const Hamburger = styled.div`
+  transition: background-color .15s .05s ease-in-out;
+    background-color: ${({ isOpen, theme }) => (isOpen ? 'transparent' : theme.black)};
+    width: 3rem;
+    height: 0.3rem;
+    border: none;
+    padding: 0;
+    &:before {
+        content: '';
+        width: 3rem;
+        height: 0.3rem;
+        background-color: ${({theme }) => theme.black};
+        display: block;
+        transition: transform .15s .05s ease-in-out;
+        transform: translateY(${({ isOpen }) => (isOpen ? '0' : '-1rem')}) rotate(${({ isOpen }) => (isOpen ? '45deg' : '0deg')});
+    }
+    &:after {
+        content: '';
+        width: 3rem;
+        height: 0.3rem;
+        background-color: ${({theme }) => theme.black};
+        display: block;
+        transition: transform .15s .05s ease-in-out;
+        transform: translateY(${({ isOpen }) => (isOpen ? '-0.2rem' : '0.8rem')}) rotate(${({ isOpen }) => (isOpen ? '-45deg' : '0deg')});
+    }
+`
+export const StyledMobileNavigation = styled.div`
+        display: none;
+
 `
