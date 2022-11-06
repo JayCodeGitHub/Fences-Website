@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { MainTemplate } from '../templates/MainTemplate';
+import Header from '../components/Header/Header';
 import {
   Wrapper,
   ContactItemsWrapper,
@@ -15,6 +16,7 @@ import ContactBar from '../components/ContactBar/ContactBar';
 function KontaktPage() {
   return (
     <MainTemplate>
+      <Header title="KONTAKT" />
       <Wrapper>
         <ContactItemsWrapper>
           <ContactItem>

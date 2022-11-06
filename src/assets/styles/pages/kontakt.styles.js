@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
-    margin-top: 12rem;
     ${({ theme }) => theme.mq.bigDesktop} {
         padding: 0 12vw 2rem 12vw;
         min-height: 60vh;
