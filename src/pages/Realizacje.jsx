@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { MainTemplate } from '../templates/MainTemplate';
+import Header from '../components/Header/Header';
 
 function RealizacjePage() {
   return (

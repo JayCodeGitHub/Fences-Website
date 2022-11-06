@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.header`
     width: 100%;
     margin-top: 11rem;
-    height: 20rem;
+    height: 18rem;
     background-color: ${({ theme }) => theme.lightGrey};
     display: flex;
     justify-content: center;

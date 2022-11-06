@@ -16,7 +16,7 @@ import ContactBar from '../components/ContactBar/ContactBar';
 function KontaktPage() {
   return (
     <MainTemplate>
-      <Header title="KONTAKT" />
+      <Header title="Kontakt" />
       <Wrapper>
         <ContactItemsWrapper>
           <ContactItem>

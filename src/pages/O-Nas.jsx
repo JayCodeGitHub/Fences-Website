@@ -1,16 +1,11 @@
 import * as React from 'react';
 import { MainTemplate } from '../templates/MainTemplate';
+import Header from '../components/Header/Header';
 
 function OnasPage() {
   return (
     <MainTemplate>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <h1>O-nas</h1>
+      <Header title="O Nas" />
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Proin gravida
