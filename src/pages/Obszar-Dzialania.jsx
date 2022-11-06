@@ -5,13 +5,7 @@ import Header from '../components/Header/Header';
 function ObszarDzialaniaPage() {
   return (
     <MainTemplate>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <h1>Obszar działania</h1>
+      <Header title="Obszar Działania" />
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Proin gravida
