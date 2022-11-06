@@ -26,7 +26,8 @@ export const ContactItem = styled.span`
     margin: 3rem 0;
     padding-left: 5rem;
     position: relative;
-   p {
+    z-index: -10;
+    p {
         margin: 0 0 0 15rem;
         width: 20rem;
         text-align: center;

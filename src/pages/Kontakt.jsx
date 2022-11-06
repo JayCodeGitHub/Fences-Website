@@ -10,6 +10,7 @@ import {
 } from '../assets/styles/pages/kontakt.styles';
 import PhoneIcon from '../assets/icons/PhoneIcon.svg';
 import MailIcon from '../assets/icons/MailIcon.svg';
+import ContactBar from '../components/ContactBar/ContactBar';
 
 function KontaktPage() {
   return (
@@ -42,6 +43,7 @@ function KontaktPage() {
           ></StyledMap>
         </MapWrapper>
       </Wrapper>
+      <ContactBar />
     </MainTemplate>
   );
 }
