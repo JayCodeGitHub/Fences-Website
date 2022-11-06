@@ -64,10 +64,12 @@ const Footer = () => {
         </ContactItemsWrapper>
       </Wrapper>
       <AuthorWrapper>
-        <span>
-          Created by JayCode
-          <ArrowUpRightIcon />
-        </span>
+        <a href="/">
+          <span>
+            Created by JayCode
+            <ArrowUpRightIcon />
+          </span>
+        </a>
       </AuthorWrapper>
     </OuterWrapper>
   );

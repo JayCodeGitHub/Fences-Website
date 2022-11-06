@@ -2,25 +2,32 @@ import styled from "styled-components";
 
 export const OuterWrapper = styled.footer`
     width: 100%;
-    height: 30rem;
+    height: 60rem;        
     background-color: ${({ theme }) => theme.secondary};
     color: ${({ theme }) => theme.white};
     display: flex;
     flex-direction: column;
+    ${({ theme }) => theme.mq.desktop} {
+        height: 30rem;        
+    }
 `
 
 export const Wrapper = styled.div`
     width: 100%;
-    height: 20rem;
+    height: 50rem;
     display: flex;
+    flex-direction: column;
+    padding: 0;
     ${({ theme }) => theme.mq.desktop} {
         padding: 0vw 10vw;
+        flex-direction: row;
+        height: 20rem;
     }
 `
 
 export const HeadingWrapper = styled.span`
     font-size: ${({ theme }) => theme.font.size.s};
-    width: 65%;
+    width: 85%;
     height: 5rem;
     display: flex;
     align-items: center;
@@ -30,39 +37,57 @@ export const HeadingWrapper = styled.span`
         text-decoration: none;
         color: ${({ theme }) => theme.white};      
     }
+    ${({ theme }) => theme.mq.desktop} {
+        width: 70%;
+    }
 `
 
 export const NavigationWrapper = styled.div`
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    height: 55%;
+    ${({ theme }) => theme.mq.desktop} {
+        width: 50%;
+        height: 100%;
+    }
 `
 
 export const StyledNavigation = styled.ul`
     list-style: none;
-    width: 65%;
+    width: 85%;
     height: 15rem;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
     padding-left: 4rem;
+    ${({ theme }) => theme.mq.desktop} {
+        width: 65%;
+    }
 
 `
 
 export const NavigationItem = styled.li`
     a {
         text-decoration: none;
-        color: ${({ theme }) => theme.white};      
+        color: ${({ theme }) => theme.white}; 
+        transition: color 0.2s ease-in-out;
+        &:hover {
+            color: ${({ theme }) => theme.grey};
+        }     
     }
     padding: 0 2rem;
     font-size: ${({ theme }) => theme.font.size.xs};
 `
 
 export const ContactItemsWrapper = styled.div`
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    height: 45%;
     display: flex;
     flex-direction: column;
+    ${({ theme }) => theme.mq.desktop} {
+        width: 50%;
+        height: 100%;
+    }
 `
 
 export const ContactItem = styled.span`  
@@ -87,14 +112,18 @@ export const AuthorWrapper = styled.div`
     align-items: center;
     width: 100%;
     height: 10rem;
-    font-size: ${({ theme }) => theme.font.size.xs};
     font-weight: bold;
     span {
         display: flex;
         align-items: center;
+        font-size: ${({ theme }) => theme.font.size.xs};
+        color: ${({ theme }) => theme.white}; 
         svg {
             height: 30px;
             stroke: ${({ theme }) => theme.white};  
         }
+    }
+    a {
+        text-decoration: none;
     }
 `
