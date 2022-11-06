@@ -5,6 +5,15 @@ module.exports = {
   },
   plugins: [
   {
+    resolve: 'gatsby-plugin-google-fonts',
+    options: {
+      fonts: [
+        'montserrat\:300,500,700',
+      ],
+      display: 'swap',
+    },
+  },
+  {
     resolve: 'gatsby-plugin-react-svg',
     options: {
       rule: {
