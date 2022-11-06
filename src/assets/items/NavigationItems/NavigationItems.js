@@ -1,11 +1,11 @@
 export const NavigationItems = [
     {
       name: 'O nas',
-      href: '/O-Nas/',
+      href: '/O-Nas',
     },
     {
       name: 'Oferta',
-      href: '/Oferta/',
+      href: '/Oferta',
     },
     {
       name: 'Obszar Działania',
