@@ -10,6 +10,7 @@ export const OuterWrapper = styled.nav`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    z-index: 20;
     background-color: ${({ theme }) => theme.lightGrey};
     ${({ theme }) => theme.mq.desktop} {
         padding: 0;
@@ -54,7 +55,7 @@ export const Wrapper = styled.div`
 `
 export const LogoWrapper = styled.span`
     font-size: ${({ theme }) => theme.font.size.s};
-    z-index: 10;
+    z-index: 20;
     a {
         color: ${({ theme }) => theme.primary};
         text-decoration: none;

@@ -7,19 +7,20 @@ const Hero = ({ secondary, title, button, href, paragraph, photo }) => {
     <>
       {!secondary ? (
         <Wrapper>
-          <h1>{title}</h1>
-          <button>
-            <Link to={href}>{button}</Link>
-          </button>
+          <header>
+            <h1>{title}</h1>
+            <button>
+              <Link to={href}>{button}</Link>
+            </button>
+          </header>
           <img src={photo} />
         </Wrapper>
       ) : (
         <Wrapper secondary background={photo}>
-          <img />
-          <div>
+          <header>
             <h1>{title}</h1>
             <p>{paragraph}</p>
-          </div>
+          </header>
         </Wrapper>
       )}
     </>
