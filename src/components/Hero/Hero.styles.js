@@ -20,6 +20,7 @@ export const Wrapper = styled.div`
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            margin: 0 0 15rem 0;
             ${({ theme }) => theme.mq.desktop} {
                 margin: 0 0 15rem 0;    
             }
@@ -62,20 +63,29 @@ export const StyledHeader = styled.header`
     }
     ${({secondary}) => (
         secondary && css`
-            left: 55%;
-            width: 65rem;
-            position: relative;
-            padding: 4rem 4rem 10rem 4rem;
+            width: 80%;
+            padding: 2rem 2rem 5rem 2rem;
+            position: absolute;
+            top: 40%;
             background-color: ${({ theme }) => theme.primary};
             h1 {
-                font-size: ${({ theme }) => theme.font.size.m};
+                font-size: ${({ theme }) => theme.font.size.s};
             }
             p {
-                font-size: ${({ theme }) => theme.font.size.m};
+                font-size: ${({ theme }) => theme.font.size.s};
                 color: ${({ theme }) => theme.white};
             }
             ${({ theme }) => theme.mq.desktop} {
+                position: relative;
                 left: 55%;
+                width: 65rem;
+                padding: 4rem 4rem 10rem 4rem;
+                h1 {
+                    font-size: ${({ theme }) => theme.font.size.m};
+                }
+                p {
+                    font-size: ${({ theme }) => theme.font.size.m};
+                }
             }
         `
     )}
