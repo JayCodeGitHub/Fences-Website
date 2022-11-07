@@ -15,10 +15,10 @@ export const Wrapper = styled.header`
         color: ${({ theme }) => theme.black};
     }
     ${({ theme }) => theme.mq.desktop} {
-    margin-top: 11rem;
-    height: 18rem;
+        margin-top: 11rem;
+        height: 18rem;
         h1 {
-        font-size: ${({ theme }) => theme.font.size.l};
+            font-size: ${({ theme }) => theme.font.size.l};
+        }
     }
-}
 `
