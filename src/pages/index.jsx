@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { MainTemplate } from '../templates/MainTemplate';
+import Hero from '../components/Hero/Hero';
 
 function IndexPage() {
   return (
@@ -10,6 +11,7 @@ function IndexPage() {
       <br />
       <br />
       <br />
+      <Hero />
       <h1>Home</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
