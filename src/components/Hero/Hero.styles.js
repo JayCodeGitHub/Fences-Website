@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            margin: 0 0 15rem 0;
+            margin: 0 0 10rem 0;
             ${({ theme }) => theme.mq.desktop} {
                 margin: 0 0 15rem 0;    
             }

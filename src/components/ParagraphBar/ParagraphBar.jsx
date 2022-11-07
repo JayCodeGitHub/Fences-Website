@@ -4,7 +4,7 @@ import { Wrapper } from './ParagraphBar.styles';
 const ParagraphBar = () => {
   return (
     <Wrapper>
-      <h1>ParagraphBar</h1>
+      <span>lorem ipsum dolor sit amet, lorem ipsum dolor sit amet</span>
     </Wrapper>
   );
 };
