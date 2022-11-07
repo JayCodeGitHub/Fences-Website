@@ -2,11 +2,7 @@ import React from 'react';
 import { Wrapper } from './ContactBar.styles';
 
 const ContactBar = () => {
-  return (
-    <Wrapper>
-      <span>Skontaktuj się z nami po darmową wycenę</span>
-    </Wrapper>
-  );
+  return <Wrapper>Skontaktuj się z nami po darmową wycenę</Wrapper>;
 };
 
 export default ContactBar;
