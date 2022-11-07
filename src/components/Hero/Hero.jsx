@@ -1,26 +1,26 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Wrapper } from './Hero.styles';
+import { Wrapper, StyledHeader, StyledImage } from './Hero.styles';
 
 const Hero = ({ secondary, title, button, href, paragraph, photo }) => {
   return (
     <>
       {!secondary ? (
         <Wrapper>
-          <header>
+          <StyledHeader>
             <h1>{title}</h1>
             <button>
               <Link to={href}>{button}</Link>
             </button>
-          </header>
-          <img src={photo} />
+          </StyledHeader>
+          <StyledImage src={photo} />
         </Wrapper>
       ) : (
         <Wrapper secondary background={photo}>
-          <header>
+          <StyledHeader secondary>
             <h1>{title}</h1>
             <p>{paragraph}</p>
-          </header>
+          </StyledHeader>
         </Wrapper>
       )}
     </>
