@@ -11,7 +11,7 @@ import {
 } from '../assets/styles/pages/kontakt.styles';
 import PhoneIcon from '../assets/icons/PhoneIcon.svg';
 import MailIcon from '../assets/icons/MailIcon.svg';
-import ContactBar from '../components/ContactBar/ContactBar';
+import ParagraphBar from '../components/ParagraphBar/ParagraphBar';
 
 function KontaktPage() {
   return (
@@ -45,7 +45,7 @@ function KontaktPage() {
           ></StyledMap>
         </MapWrapper>
       </Wrapper>
-      <ContactBar />
+      <ParagraphBar value="Skontaktuj się z nami po darmową wycenę" />
     </MainTemplate>
   );
 }

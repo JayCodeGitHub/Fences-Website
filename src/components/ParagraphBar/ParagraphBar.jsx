@@ -1,10 +1,10 @@
 import React from 'react';
 import { Wrapper } from './ParagraphBar.styles';
 
-const ParagraphBar = () => {
+const ParagraphBar = ({ secondary, value }) => {
   return (
-    <Wrapper>
-      <span>lorem ipsum dolor sit amet, lorem ipsum dolor sit amet</span>
+    <Wrapper secondary={secondary}>
+      <span>{value}</span>
     </Wrapper>
   );
 };

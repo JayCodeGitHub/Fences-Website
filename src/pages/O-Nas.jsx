@@ -15,7 +15,10 @@ function OnasPage() {
         title="Lorem ipsum"
         paragraph="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century."
       />
-      <ParagraphBar />
+      <ParagraphBar
+        secondary
+        value="lorem ipsum dolor sit amet, lorem ipsum dolor sit amet"
+      />
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Proin gravida
