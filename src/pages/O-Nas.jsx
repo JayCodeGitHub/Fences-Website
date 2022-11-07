@@ -2,12 +2,18 @@ import * as React from 'react';
 import { MainTemplate } from '../templates/MainTemplate';
 import Header from '../components/Header/Header';
 import Hero from '../components/Hero/Hero';
+import Photo from '../assets/images/2.jpg';
 
 function OnasPage() {
   return (
     <MainTemplate>
       <Header title="O Nas" />
-      <Hero />
+      <Hero
+        secondary
+        photo={Photo}
+        title="Lorem ipsum"
+        paragraph="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century."
+      />
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Proin gravida

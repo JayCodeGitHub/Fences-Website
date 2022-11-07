@@ -1,17 +1,17 @@
 import * as React from 'react';
 import { MainTemplate } from '../templates/MainTemplate';
 import Hero from '../components/Hero/Hero';
+import Photo from '../assets/images/1.jpg';
 
 function IndexPage() {
   return (
     <MainTemplate>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <Hero />
+      <Hero
+        title="Ogrodzenia Poznań i Okolice"
+        button="Nasze Realizacje"
+        href="/Realizacje"
+        photo={Photo}
+      />
       <h1>Home</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

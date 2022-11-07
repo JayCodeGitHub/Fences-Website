@@ -15,7 +15,7 @@ export const Wrapper = styled.header`
         color: ${({ theme }) => theme.black};
     }
     ${({ theme }) => theme.mq.desktop} {
-        margin-top: 11rem;
+        margin-top: 11.5rem;
         height: 18rem;
         h1 {
             font-size: ${({ theme }) => theme.font.size.l};
