@@ -3,6 +3,7 @@ import { MainTemplate } from '../templates/MainTemplate';
 import Header from '../components/Header/Header';
 import Hero from '../components/Hero/Hero';
 import Photo from '../assets/images/2.jpg';
+import ParagraphBar from '../components/ParagraphBar/ParagraphBar';
 
 function OnasPage() {
   return (
@@ -14,6 +15,7 @@ function OnasPage() {
         title="Lorem ipsum"
         paragraph="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century."
       />
+      <ParagraphBar />
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Proin gravida

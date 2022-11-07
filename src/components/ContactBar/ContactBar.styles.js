@@ -13,6 +13,6 @@ export const Wrapper = styled.div`
     color: ${({ theme }) => theme.white};
     ${({ theme }) => theme.mq.desktop} {
         font-size: ${({ theme }) => theme.font.size.s};
-    height: 12rem;
+        height: 12rem;
     }
 `

@@ -77,7 +77,7 @@ export const StyledHeader = styled.header`
             }
             ${({ theme }) => theme.mq.desktop} {
                 position: relative;
-                left: 55%;
+                left: 20%;
                 width: 65rem;
                 padding: 4rem 4rem 10rem 4rem;
                 h1 {
