@@ -8,12 +8,12 @@ export const NavigationItems = [
       href: '/Oferta',
     },
     {
-      name: 'Obszar Działania',
-      href: '/Obszar-Dzialania',
-    },
-    {
       name: 'Realizacje',
       href: '/Realizacje',
+    },
+    {
+      name: 'Obszar Działania',
+      href: '/Obszar-Dzialania',
     },
     {
       name: 'Kontakt',

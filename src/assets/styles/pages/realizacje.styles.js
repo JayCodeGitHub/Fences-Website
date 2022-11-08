@@ -5,26 +5,34 @@ export const Wrapper = styled.div`
     padding: 5vw;
     ${({ theme }) => theme.mq.desktop} {
         padding: 2.5vw 5vw 2.5vw 5vw;
-        display: grid;
         width: 100%;
-        grid-template-columns: repeat(2, 1fr);
         grid-gap: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     ${({ theme }) => theme.mq.bigDesktop} {
-        grid-template-columns: repeat(3, 1fr);
     }
 
 `
 
-export const StyledImage = styled.img`
+export const ImageWrapper = styled.div`
     width: 100%;
     margin: 1rem 0;
     border-radius: 5px;
+    overflow: hidden;
     ${({ theme }) => theme.mq.desktop} {
-        height: 28vw;
-        object-fit: cover;
+        width: 40%;
+        height: 27vw;
     }
     ${({ theme }) => theme.mq.bigDesktop} {
-        height: 18vw;
-    }
+        height: 20vw;
+        width: 30%;
+    } 
+`
+
+export const StyledImage = styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 `
