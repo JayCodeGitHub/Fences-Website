@@ -2,7 +2,6 @@ import * as React from 'react';
 import { MainTemplate } from '../templates/MainTemplate';
 import Header from '../components/Header/Header';
 import {
-  Wrapper,
   Paragraph,
   GalleryWrapper,
   ImageWrapper,
