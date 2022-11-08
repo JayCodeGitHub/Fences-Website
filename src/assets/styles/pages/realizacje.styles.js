@@ -6,14 +6,10 @@ export const Wrapper = styled.div`
     ${({ theme }) => theme.mq.desktop} {
         padding: 2.5vw 5vw 2.5vw 5vw;
         width: 100%;
-        grid-gap: 50px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
     }
-    ${({ theme }) => theme.mq.bigDesktop} {
-    }
-
 `
 
 export const ImageWrapper = styled.div`
