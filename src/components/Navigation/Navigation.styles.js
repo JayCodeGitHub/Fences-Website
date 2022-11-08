@@ -37,7 +37,7 @@ export const ContactItemsWrapper = styled.div`
             justify-content: center;
         svg {
             height: 25px;
-            stroke: ${({ theme }) => theme.primary};      
+            stroke: ${({ theme }) => theme.primary};  
         }
     }
     }    

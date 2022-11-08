@@ -1,10 +1,30 @@
 import React from 'react';
-import { Wrapper } from './GallerySection.styles';
+import {
+  Wrapper,
+  ImageWrapper,
+  StyledImage,
+  ShadowBox,
+} from './GallerySection.styles';
 
-const GallerySection = () => {
+const GallerySection = ({ items, secondary }) => {
   return (
     <Wrapper>
-      <h1>Gallery Section</h1>
+      {items.map(({ image, title, list }) => (
+        <ImageWrapper>
+          <span>
+            <h2>{title}</h2>
+            {secondary ? (
+              <ul>
+                {list.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            ) : null}
+          </span>
+          <ShadowBox />
+          <StyledImage src={image} />
+        </ImageWrapper>
+      ))}
     </Wrapper>
   );
 };
