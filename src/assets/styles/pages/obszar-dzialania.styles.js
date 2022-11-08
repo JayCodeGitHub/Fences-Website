@@ -37,9 +37,6 @@ export const ImageWrapper = styled.div`
     border-radius: 5px;
     overflow: hidden;
     ${({ theme }) => theme.mq.desktop} {
-        width: 40%;
-    }
-    ${({ theme }) => theme.mq.bigDesktop} {
         height: 17vw;
         width: 30%;
     } 
