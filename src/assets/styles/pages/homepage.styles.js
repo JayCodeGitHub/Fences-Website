@@ -52,7 +52,7 @@ export const StepsSection = styled.section`
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        width: 70%;
+        width: 100%;
         margin: 2vw 0;
     }
     h3 {
@@ -69,12 +69,10 @@ export const StepsSection = styled.section`
         text-align: center;
     }
     ${({ theme }) => theme.mq.desktop} {
-    }
-    ${({ theme }) => theme.mq.bigDesktop} {
-        padding: 2vw 12vw 2vw 12vw;
-        p {
-
+        div {
+            width: 70%;
         }
+        padding: 2vw 12vw 2vw 12vw;
     }
 `
 
