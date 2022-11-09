@@ -42,7 +42,7 @@ export const ContactItem = styled.span`
     }  
     svg {
         height: 40px;
-        stroke: ${({ theme }) => theme.primary};   
+        stroke: ${({ theme }) => theme.primary};
     }
     &::before {
         content: '';

@@ -1,7 +1,15 @@
 import * as React from 'react';
 import { MainTemplate } from '../templates/MainTemplate';
+import ParagraphBar from '../components/ParagraphBar/ParagraphBar';
 import Hero from '../components/Hero/Hero';
 import Photo from '../assets/images/1.jpg';
+import {
+  Title,
+  Paragraph,
+  OffersSection,
+  StepsSection,
+  GallerySection,
+} from '../assets/styles/pages/homepage.styles';
 
 function IndexPage() {
   return (
@@ -12,223 +20,18 @@ function IndexPage() {
         href="/Realizacje"
         photo={Photo}
       />
-      <h1>Home</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Proin gravida
-        hendrerit lectus a. Etiam tempor orci eu lobortis. Amet nisl suscipit
-        adipiscing bibendum est ultricies integer quis auctor. Dui ut ornare
-        lectus sit amet. Dictum varius duis at consectetur lorem donec massa
-        sapien. Non quam lacus suspendisse faucibus. Amet mauris commodo quis
-        imperdiet. Aliquam id diam maecenas ultricies mi eget mauris pharetra
-        et. Nulla posuere sollicitudin aliquam ultrices. Potenti nullam ac
-        tortor vitae. Id interdum velit laoreet id donec. Viverra justo nec
-        ultrices dui sapien eget. Ultricies leo integer malesuada nunc vel risus
-        commodo. Ornare quam viverra orci sagittis eu volutpat odio. Morbi leo
-        urna molestie at elementum eu facilisis sed. Fames ac turpis egestas sed
-        tempus. Quam viverra orci sagittis eu. Vel quam elementum pulvinar
-        etiam. Sit amet consectetur adipiscing elit ut aliquam. Morbi tempus
-        iaculis urna id volutpat lacus laoreet non. Sed sed risus pretium quam.
-        At consectetur lorem donec massa sapien faucibus et. Odio pellentesque
-        diam volutpat commodo sed egestas egestas. Ultricies mi eget mauris
-        pharetra et ultrices neque ornare. Id velit ut tortor pretium. Facilisi
-        nullam vehicula ipsum a arcu. Ut ornare lectus sit amet est placerat in
-        egestas erat. Massa sed elementum tempus egestas sed sed risus pretium.
-        Proin nibh nisl condimentum id venenatis a condimentum vitae. Non
-        consectetur a erat nam at lectus urna duis. Neque ornare aenean euismod
-        elementum. Tempor commodo ullamcorper a lacus vestibulum sed arcu non.
-        Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant
-        morbi. Nunc scelerisque viverra mauris in.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Proin gravida
-        hendrerit lectus a. Etiam tempor orci eu lobortis. Amet nisl suscipit
-        adipiscing bibendum est ultricies integer quis auctor. Dui ut ornare
-        lectus sit amet. Dictum varius duis at consectetur lorem donec massa
-        sapien. Non quam lacus suspendisse faucibus. Amet mauris commodo quis
-        imperdiet. Aliquam id diam maecenas ultricies mi eget mauris pharetra
-        et. Nulla posuere sollicitudin aliquam ultrices. Potenti nullam ac
-        tortor vitae. Id interdum velit laoreet id donec. Viverra justo nec
-        ultrices dui sapien eget. Ultricies leo integer malesuada nunc vel risus
-        commodo. Ornare quam viverra orci sagittis eu volutpat odio. Morbi leo
-        urna molestie at elementum eu facilisis sed. Fames ac turpis egestas sed
-        tempus. Quam viverra orci sagittis eu. Vel quam elementum pulvinar
-        etiam. Sit amet consectetur adipiscing elit ut aliquam. Morbi tempus
-        iaculis urna id volutpat lacus laoreet non. Sed sed risus pretium quam.
-        At consectetur lorem donec massa sapien faucibus et. Odio pellentesque
-        diam volutpat commodo sed egestas egestas. Ultricies mi eget mauris
-        pharetra et ultrices neque ornare. Id velit ut tortor pretium. Facilisi
-        nullam vehicula ipsum a arcu. Ut ornare lectus sit amet est placerat in
-        egestas erat. Massa sed elementum tempus egestas sed sed risus pretium.
-        Proin nibh nisl condimentum id venenatis a condimentum vitae. Non
-        consectetur a erat nam at lectus urna duis. Neque ornare aenean euismod
-        elementum. Tempor commodo ullamcorper a lacus vestibulum sed arcu non.
-        Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant
-        morbi. Nunc scelerisque viverra mauris in.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Proin gravida
-        hendrerit lectus a. Etiam tempor orci eu lobortis. Amet nisl suscipit
-        adipiscing bibendum est ultricies integer quis auctor. Dui ut ornare
-        lectus sit amet. Dictum varius duis at consectetur lorem donec massa
-        sapien. Non quam lacus suspendisse faucibus. Amet mauris commodo quis
-        imperdiet. Aliquam id diam maecenas ultricies mi eget mauris pharetra
-        et. Nulla posuere sollicitudin aliquam ultrices. Potenti nullam ac
-        tortor vitae. Id interdum velit laoreet id donec. Viverra justo nec
-        ultrices dui sapien eget. Ultricies leo integer malesuada nunc vel risus
-        commodo. Ornare quam viverra orci sagittis eu volutpat odio. Morbi leo
-        urna molestie at elementum eu facilisis sed. Fames ac turpis egestas sed
-        tempus. Quam viverra orci sagittis eu. Vel quam elementum pulvinar
-        etiam. Sit amet consectetur adipiscing elit ut aliquam. Morbi tempus
-        iaculis urna id volutpat lacus laoreet non. Sed sed risus pretium quam.
-        At consectetur lorem donec massa sapien faucibus et. Odio pellentesque
-        diam volutpat commodo sed egestas egestas. Ultricies mi eget mauris
-        pharetra et ultrices neque ornare. Id velit ut tortor pretium. Facilisi
-        nullam vehicula ipsum a arcu. Ut ornare lectus sit amet est placerat in
-        egestas erat. Massa sed elementum tempus egestas sed sed risus pretium.
-        Proin nibh nisl condimentum id venenatis a condimentum vitae. Non
-        consectetur a erat nam at lectus urna duis. Neque ornare aenean euismod
-        elementum. Tempor commodo ullamcorper a lacus vestibulum sed arcu non.
-        Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant
-        morbi. Nunc scelerisque viverra mauris in.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Proin gravida
-        hendrerit lectus a. Etiam tempor orci eu lobortis. Amet nisl suscipit
-        adipiscing bibendum est ultricies integer quis auctor. Dui ut ornare
-        lectus sit amet. Dictum varius duis at consectetur lorem donec massa
-        sapien. Non quam lacus suspendisse faucibus. Amet mauris commodo quis
-        imperdiet. Aliquam id diam maecenas ultricies mi eget mauris pharetra
-        et. Nulla posuere sollicitudin aliquam ultrices. Potenti nullam ac
-        tortor vitae. Id interdum velit laoreet id donec. Viverra justo nec
-        ultrices dui sapien eget. Ultricies leo integer malesuada nunc vel risus
-        commodo. Ornare quam viverra orci sagittis eu volutpat odio. Morbi leo
-        urna molestie at elementum eu facilisis sed. Fames ac turpis egestas sed
-        tempus. Quam viverra orci sagittis eu. Vel quam elementum pulvinar
-        etiam. Sit amet consectetur adipiscing elit ut aliquam. Morbi tempus
-        iaculis urna id volutpat lacus laoreet non. Sed sed risus pretium quam.
-        At consectetur lorem donec massa sapien faucibus et. Odio pellentesque
-        diam volutpat commodo sed egestas egestas. Ultricies mi eget mauris
-        pharetra et ultrices neque ornare. Id velit ut tortor pretium. Facilisi
-        nullam vehicula ipsum a arcu. Ut ornare lectus sit amet est placerat in
-        egestas erat. Massa sed elementum tempus egestas sed sed risus pretium.
-        Proin nibh nisl condimentum id venenatis a condimentum vitae. Non
-        consectetur a erat nam at lectus urna duis. Neque ornare aenean euismod
-        elementum. Tempor commodo ullamcorper a lacus vestibulum sed arcu non.
-        Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant
-        morbi. Nunc scelerisque viverra mauris in.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Proin gravida
-        hendrerit lectus a. Etiam tempor orci eu lobortis. Amet nisl suscipit
-        adipiscing bibendum est ultricies integer quis auctor. Dui ut ornare
-        lectus sit amet. Dictum varius duis at consectetur lorem donec massa
-        sapien. Non quam lacus suspendisse faucibus. Amet mauris commodo quis
-        imperdiet. Aliquam id diam maecenas ultricies mi eget mauris pharetra
-        et. Nulla posuere sollicitudin aliquam ultrices. Potenti nullam ac
-        tortor vitae. Id interdum velit laoreet id donec. Viverra justo nec
-        ultrices dui sapien eget. Ultricies leo integer malesuada nunc vel risus
-        commodo. Ornare quam viverra orci sagittis eu volutpat odio. Morbi leo
-        urna molestie at elementum eu facilisis sed. Fames ac turpis egestas sed
-        tempus. Quam viverra orci sagittis eu. Vel quam elementum pulvinar
-        etiam. Sit amet consectetur adipiscing elit ut aliquam. Morbi tempus
-        iaculis urna id volutpat lacus laoreet non. Sed sed risus pretium quam.
-        At consectetur lorem donec massa sapien faucibus et. Odio pellentesque
-        diam volutpat commodo sed egestas egestas. Ultricies mi eget mauris
-        pharetra et ultrices neque ornare. Id velit ut tortor pretium. Facilisi
-        nullam vehicula ipsum a arcu. Ut ornare lectus sit amet est placerat in
-        egestas erat. Massa sed elementum tempus egestas sed sed risus pretium.
-        Proin nibh nisl condimentum id venenatis a condimentum vitae. Non
-        consectetur a erat nam at lectus urna duis. Neque ornare aenean euismod
-        elementum. Tempor commodo ullamcorper a lacus vestibulum sed arcu non.
-        Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant
-        morbi. Nunc scelerisque viverra mauris in.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Proin gravida
-        hendrerit lectus a. Etiam tempor orci eu lobortis. Amet nisl suscipit
-        adipiscing bibendum est ultricies integer quis auctor. Dui ut ornare
-        lectus sit amet. Dictum varius duis at consectetur lorem donec massa
-        sapien. Non quam lacus suspendisse faucibus. Amet mauris commodo quis
-        imperdiet. Aliquam id diam maecenas ultricies mi eget mauris pharetra
-        et. Nulla posuere sollicitudin aliquam ultrices. Potenti nullam ac
-        tortor vitae. Id interdum velit laoreet id donec. Viverra justo nec
-        ultrices dui sapien eget. Ultricies leo integer malesuada nunc vel risus
-        commodo. Ornare quam viverra orci sagittis eu volutpat odio. Morbi leo
-        urna molestie at elementum eu facilisis sed. Fames ac turpis egestas sed
-        tempus. Quam viverra orci sagittis eu. Vel quam elementum pulvinar
-        etiam. Sit amet consectetur adipiscing elit ut aliquam. Morbi tempus
-        iaculis urna id volutpat lacus laoreet non. Sed sed risus pretium quam.
-        At consectetur lorem donec massa sapien faucibus et. Odio pellentesque
-        diam volutpat commodo sed egestas egestas. Ultricies mi eget mauris
-        pharetra et ultrices neque ornare. Id velit ut tortor pretium. Facilisi
-        nullam vehicula ipsum a arcu. Ut ornare lectus sit amet est placerat in
-        egestas erat. Massa sed elementum tempus egestas sed sed risus pretium.
-        Proin nibh nisl condimentum id venenatis a condimentum vitae. Non
-        consectetur a erat nam at lectus urna duis. Neque ornare aenean euismod
-        elementum. Tempor commodo ullamcorper a lacus vestibulum sed arcu non.
-        Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant
-        morbi. Nunc scelerisque viverra mauris in.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Proin gravida
-        hendrerit lectus a. Etiam tempor orci eu lobortis. Amet nisl suscipit
-        adipiscing bibendum est ultricies integer quis auctor. Dui ut ornare
-        lectus sit amet. Dictum varius duis at consectetur lorem donec massa
-        sapien. Non quam lacus suspendisse faucibus. Amet mauris commodo quis
-        imperdiet. Aliquam id diam maecenas ultricies mi eget mauris pharetra
-        et. Nulla posuere sollicitudin aliquam ultrices. Potenti nullam ac
-        tortor vitae. Id interdum velit laoreet id donec. Viverra justo nec
-        ultrices dui sapien eget. Ultricies leo integer malesuada nunc vel risus
-        commodo. Ornare quam viverra orci sagittis eu volutpat odio. Morbi leo
-        urna molestie at elementum eu facilisis sed. Fames ac turpis egestas sed
-        tempus. Quam viverra orci sagittis eu. Vel quam elementum pulvinar
-        etiam. Sit amet consectetur adipiscing elit ut aliquam. Morbi tempus
-        iaculis urna id volutpat lacus laoreet non. Sed sed risus pretium quam.
-        At consectetur lorem donec massa sapien faucibus et. Odio pellentesque
-        diam volutpat commodo sed egestas egestas. Ultricies mi eget mauris
-        pharetra et ultrices neque ornare. Id velit ut tortor pretium. Facilisi
-        nullam vehicula ipsum a arcu. Ut ornare lectus sit amet est placerat in
-        egestas erat. Massa sed elementum tempus egestas sed sed risus pretium.
-        Proin nibh nisl condimentum id venenatis a condimentum vitae. Non
-        consectetur a erat nam at lectus urna duis. Neque ornare aenean euismod
-        elementum. Tempor commodo ullamcorper a lacus vestibulum sed arcu non.
-        Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant
-        morbi. Nunc scelerisque viverra mauris in.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Proin gravida
-        hendrerit lectus a. Etiam tempor orci eu lobortis. Amet nisl suscipit
-        adipiscing bibendum est ultricies integer quis auctor. Dui ut ornare
-        lectus sit amet. Dictum varius duis at consectetur lorem donec massa
-        sapien. Non quam lacus suspendisse faucibus. Amet mauris commodo quis
-        imperdiet. Aliquam id diam maecenas ultricies mi eget mauris pharetra
-        et. Nulla posuere sollicitudin aliquam ultrices. Potenti nullam ac
-        tortor vitae. Id interdum velit laoreet id donec. Viverra justo nec
-        ultrices dui sapien eget. Ultricies leo integer malesuada nunc vel risus
-        commodo. Ornare quam viverra orci sagittis eu volutpat odio. Morbi leo
-        urna molestie at elementum eu facilisis sed. Fames ac turpis egestas sed
-        tempus. Quam viverra orci sagittis eu. Vel quam elementum pulvinar
-        etiam. Sit amet consectetur adipiscing elit ut aliquam. Morbi tempus
-        iaculis urna id volutpat lacus laoreet non. Sed sed risus pretium quam.
-        At consectetur lorem donec massa sapien faucibus et. Odio pellentesque
-        diam volutpat commodo sed egestas egestas. Ultricies mi eget mauris
-        pharetra et ultrices neque ornare. Id velit ut tortor pretium. Facilisi
-        nullam vehicula ipsum a arcu. Ut ornare lectus sit amet est placerat in
-        egestas erat. Massa sed elementum tempus egestas sed sed risus pretium.
-        Proin nibh nisl condimentum id venenatis a condimentum vitae. Non
-        consectetur a erat nam at lectus urna duis. Neque ornare aenean euismod
-        elementum. Tempor commodo ullamcorper a lacus vestibulum sed arcu non.
-        Ipsum dolor sit amet consectetur adipiscing elit pellentesque habitant
-        morbi. Nunc scelerisque viverra mauris in.
-      </p>
+      <Title>lorem ipsum dolor sit amet, lorem ipsum dolor sit amet</Title>
+      <Paragraph>
+        Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
+        laying out print, graphic or web designs. The passage is attributed to
+        an unknown typesetter in the 15th century who is thought to have
+        scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a
+        type specimen book. It usually begins with:
+      </Paragraph>
+      <OffersSection>Offers</OffersSection>
+      <StepsSection>Steps</StepsSection>
+      <GallerySection>Gallery</GallerySection>
+      <ParagraphBar value="Skontaktuj się z nami po darmową wycenę" />
     </MainTemplate>
   );
 }
