@@ -1,34 +1,37 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-    min-height: 100vh;
-    padding: 5vw;
+    padding: 2.5vw;
+    width: 100%;
     ${({ theme }) => theme.mq.desktop} {
-        padding: 2.5vw 5vw 2.5vw 5vw;
-        width: 100%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+    }
+    ${({ theme }) => theme.mq.bigDesktop} {
+        padding: 2.5vw 5vw 2.5vw 5vw;
     }
 `
 
 export const ImageWrapper = styled.div`
     width: 100%;
-    margin: 1rem 0;
-    border-radius: 5px;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    height: 70vw;
     ${({ theme }) => theme.mq.desktop} {
-        width: 40%;
-        height: 27vw;
+        width: 33.33%;
+        max-height: 23vw;
     }
     ${({ theme }) => theme.mq.bigDesktop} {
-        height: 20vw;
-        width: 30%;
+        width: 33.33%;
+        max-height: 22vw;
     } 
 `
 
 export const StyledImage = styled.img`
-    width: 100%;
+    width: 95%;
     height: 100%;
+    border-radius: 1rem;
     object-fit: cover;
 `
