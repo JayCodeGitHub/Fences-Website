@@ -1,8 +1,10 @@
 import * as React from 'react';
+import { Link } from 'gatsby';
 import { MainTemplate } from '../templates/MainTemplate';
 import ParagraphBar from '../components/ParagraphBar/ParagraphBar';
 import Hero from '../components/Hero/Hero';
 import Photo from '../assets/images/1.jpg';
+import PhotoTwo from '../assets/images/4.jpeg';
 import {
   Title,
   Paragraph,
@@ -28,7 +30,29 @@ function IndexPage() {
         scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a
         type specimen book. It usually begins with:
       </Paragraph>
-      <OffersSection>Offers</OffersSection>
+      <OffersSection>
+        <h1>Nasza Oferta</h1>
+        <div>
+          <div>
+            <img src={PhotoTwo} />
+          </div>
+          <div>
+            <img src={PhotoTwo} />
+          </div>
+          <div>
+            <img src={PhotoTwo} />
+          </div>
+          <div>
+            <img src={PhotoTwo} />
+          </div>
+          <div>
+            <img src={PhotoTwo} />
+          </div>
+          <div>
+            <img src={PhotoTwo} />
+          </div>
+        </div>
+      </OffersSection>
       <StepsSection>
         <div>
           <h3>1.</h3>
@@ -67,7 +91,29 @@ function IndexPage() {
           </p>
         </div>
       </StepsSection>
-      <GallerySection>Gallery</GallerySection>
+      <GallerySection>
+        <h1>Nasze Realizacje</h1>
+        <div>
+          <div>
+            <img src={PhotoTwo} />
+          </div>
+          <div>
+            <img src={PhotoTwo} />
+          </div>
+          <div>
+            <img src={PhotoTwo} />
+          </div>
+          <div>
+            <img src={PhotoTwo} />
+          </div>
+          <div>
+            <img src={PhotoTwo} />
+          </div>
+          <div>
+            <Link to="/Realizacje">Zobacz Wszystkie Realizacje</Link>
+          </div>
+        </div>
+      </GallerySection>
       <ParagraphBar value="Skontaktuj się z nami po darmową wycenę" />
     </MainTemplate>
   );

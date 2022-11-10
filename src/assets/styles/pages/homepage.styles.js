@@ -27,16 +27,41 @@ export const Paragraph = styled.p`
 `
 
 export const OffersSection = styled.section`
-    height: 50vw;
     width: 100%;
     background-color: ${({ theme }) => theme.lightGrey};
     padding: 5vw;
-    ${({ theme }) => theme.mq.desktop} {
+    display: flex;
+    flex-direction: column;
+    h1 {
+        width: 100%;
+        text-align: center;
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        div { 
+        width: 100%;
         display: flex;
         justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        img {
+            width: 95%;
+        }
+    }
+    }
+    ${({ theme }) => theme.mq.desktop} {
+        div {
+            flex-direction: row;
+            flex-wrap: wrap; 
+            div {
+                width: 33.33%;
+            }
+        }
     }
     ${({ theme }) => theme.mq.bigDesktop} {
-        p
+        padding: 4vw 12vw 4vw 12vw;
     }
 `
 
@@ -77,13 +102,38 @@ export const StepsSection = styled.section`
 `
 
 export const GallerySection = styled.section`
-    height: 50vw;
-    width: 100%;
+   width: 100%;
     background-color: ${({ theme }) => theme.lightGrey};
     padding: 5vw;
-    ${({ theme }) => theme.mq.desktop} {
+    display: flex;
+    flex-direction: column;
+    h1 {
+        width: 100%;
+        text-align: center;
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        div { 
+        width: 100%;
         display: flex;
         justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        img {
+            width: 95%;
+        }
+    }
+    }
+    ${({ theme }) => theme.mq.desktop} {
+        div {
+            flex-direction: row;
+            flex-wrap: wrap; 
+            div {
+                width: 33.33%;
+            }
+        }
     }
     ${({ theme }) => theme.mq.bigDesktop} {
         padding: 4vw 12vw 4vw 12vw;
