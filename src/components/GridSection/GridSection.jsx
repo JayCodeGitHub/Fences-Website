@@ -1,11 +1,34 @@
 import React from 'react';
-import { Wrapper } from './GridSection.styles';
+import {
+  OuterWrapper,
+  StyledHeading,
+  Wrapper,
+  ImageWrapper,
+  StyledImage,
+  StyledLink,
+} from './GridSection.styles';
+import ArrowRightIcon from '../../assets/icons/ArrowRight.svg';
 
-const GridSection = () => {
+const GridSection = ({ title, items, link, href, background }) => {
   return (
-    <Wrapper>
-      <h1>GridView</h1>
-    </Wrapper>
+    <OuterWrapper background={background}>
+      {title ? <StyledHeading>{title}</StyledHeading> : null}
+      <Wrapper>
+        {items.map(({ image }) => (
+          <ImageWrapper>
+            <StyledImage src={image} />
+          </ImageWrapper>
+        ))}
+        {link ? (
+          <ImageWrapper>
+            <StyledLink to={href}>
+              {link}
+              <ArrowRightIcon />
+            </StyledLink>
+          </ImageWrapper>
+        ) : null}
+      </Wrapper>
+    </OuterWrapper>
   );
 };
 

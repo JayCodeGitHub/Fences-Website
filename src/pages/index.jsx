@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Link } from 'gatsby';
 import { MainTemplate } from '../templates/MainTemplate';
 import ParagraphBar from '../components/ParagraphBar/ParagraphBar';
 import Hero from '../components/Hero/Hero';
@@ -7,15 +6,14 @@ import Photo from '../assets/images/1.jpg';
 import {
   Title,
   Paragraph,
-  OffersSection,
   StepsSection,
-  GallerySection,
 } from '../assets/styles/pages/homepage.styles';
 import {
   OffersSectionItems,
   GallerySectionItems,
   StepsSectionItems,
 } from '../assets/items/HomePageItems/HomePageItems';
+import GridSection from '../components/GridSection/GridSection';
 
 function IndexPage() {
   return (
@@ -34,16 +32,11 @@ function IndexPage() {
         scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a
         type specimen book. It usually begins with:
       </Paragraph>
-      <OffersSection>
-        <h1>Nasza Oferta</h1>
-        <div>
-          {OffersSectionItems.map(({ image }) => (
-            <div>
-              <img src={image} />
-            </div>
-          ))}
-        </div>
-      </OffersSection>
+      <GridSection
+        title="Nasza Oferta"
+        items={OffersSectionItems}
+        background={({ theme }) => theme.lightGrey}
+      />
       <StepsSection>
         {StepsSectionItems.map(({ number, heading, paragraph }) => (
           <div>
@@ -53,19 +46,13 @@ function IndexPage() {
           </div>
         ))}
       </StepsSection>
-      <GallerySection>
-        <h1>Nasze Realizacje</h1>
-        <div>
-          {GallerySectionItems.map(({ image }) => (
-            <div>
-              <img src={image} />
-            </div>
-          ))}
-          <div>
-            <Link to="/Realizacje">Zobacz Wszystkie Realizacje</Link>
-          </div>
-        </div>
-      </GallerySection>
+      <GridSection
+        title="GridView"
+        items={GallerySectionItems}
+        link="Zobacz Wszystkie Realizacje"
+        href="/Realizacje"
+        background={({ theme }) => theme.lightGrey}
+      />
       <ParagraphBar value="Skontaktuj się z nami po darmową wycenę" />
     </MainTemplate>
   );
