@@ -2,7 +2,7 @@ import * as React from 'react';
 import { MainTemplate } from '../templates/MainTemplate';
 import ParagraphBar from '../components/ParagraphBar/ParagraphBar';
 import Hero from '../components/Hero/Hero';
-import Photo from '../assets/images/1.jpg';
+import Photo from '../assets/images/4.jpeg';
 import {
   Title,
   Paragraph,

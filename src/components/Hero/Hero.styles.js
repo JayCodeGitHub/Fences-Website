@@ -98,7 +98,7 @@ export const StyledImage = styled.img`
     object-fit: cover;
     top: 35%;
     ${({ theme }) => theme.mq.desktop} {
-        width: 50%;
+        width: 45%;
         height: auto;
         position: absolute;
         top: 20%;
