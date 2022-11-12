@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { MainTemplate } from '../templates/MainTemplate';
 import Header from '../components/Header/Header';
-import { Paragraph } from '../assets/styles/pages/obszar-dzialania.styles';
+import Paragraph from '../components/Paragraph/Paragraph';
 import GridSection from '../components/GridSection/GridSection';
 import { ObszarDzialaniaItems } from '../assets/items/ObszarDzialaniaItems/ObszarDzialaniaItems';
 

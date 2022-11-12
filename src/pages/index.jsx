@@ -3,11 +3,8 @@ import { MainTemplate } from '../templates/MainTemplate';
 import ParagraphBar from '../components/ParagraphBar/ParagraphBar';
 import Hero from '../components/Hero/Hero';
 import Photo from '../assets/images/4.jpeg';
-import {
-  Title,
-  Paragraph,
-  StepsSection,
-} from '../assets/styles/pages/homepage.styles';
+import { Title, StepsSection } from '../assets/styles/pages/homepage.styles';
+import Paragraph from '../components/Paragraph/Paragraph';
 import {
   OffersSectionItems,
   GallerySectionItems,
