@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { MainTemplate } from '../templates/MainTemplate';
 import Header from '../components/Header/Header';
-import GallerySection from '../components/GallerySection/GallerySection';
+import GridSection from '../components/GridSection/GridSection';
 import { OfertaItems } from '../assets/items/OfertaItems/OfertaItems';
 
 function OfertaPage() {
   return (
     <MainTemplate>
       <Header title="Oferta" />
-      <GallerySection items={OfertaItems} />
+      <GridSection items={OfertaItems} secondary />
     </MainTemplate>
   );
 }

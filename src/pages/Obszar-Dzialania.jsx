@@ -2,7 +2,7 @@ import * as React from 'react';
 import { MainTemplate } from '../templates/MainTemplate';
 import Header from '../components/Header/Header';
 import { Paragraph } from '../assets/styles/pages/obszar-dzialania.styles';
-import GallerySection from '../components/GallerySection/GallerySection';
+import GridSection from '../components/GridSection/GridSection';
 import { ObszarDzialaniaItems } from '../assets/items/ObszarDzialaniaItems/ObszarDzialaniaItems';
 
 function ObszarDzialaniaPage() {
@@ -23,7 +23,7 @@ function ObszarDzialaniaPage() {
         scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a
         type specimen book. It usually begins with:
       </Paragraph>
-      <GallerySection items={ObszarDzialaniaItems} secondary />
+      <GridSection items={ObszarDzialaniaItems} secondary />
     </MainTemplate>
   );
 }

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import { Link } from 'gatsby';
 
 export const OuterWrapper = styled.section`
@@ -28,7 +28,7 @@ export const Wrapper = styled.div`
     }
 `
 
-export const ImageWrapper = styled.div`
+export const GridItem = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
@@ -37,6 +37,54 @@ export const ImageWrapper = styled.div`
     ${({ theme }) => theme.mq.desktop} {
         width: 33.33%;
     }
+`
+
+export const ImageWrapper = styled.div`
+    width: 100%;
+    position: relative;
+    height: 60vw;
+    span {
+        position: absolute;
+        width: 100%;
+        left: 5%;
+    }
+    h2 {
+        color: ${({ theme }) => theme.white};
+        font-size: ${({ theme }) => theme.font.size.m};
+        width: 60%;
+    }
+    ul {
+        color: ${({ theme }) => theme.white};
+        font-size: ${({ theme }) => theme.font.size.xs};
+    }
+    ${({ theme }) => theme.mq.desktop} {
+        height: 20.5vw;
+        h2 {
+            font-size: ${({ theme }) => theme.font.size.s};
+        }
+        ul {
+            font-size: ${({ theme }) => theme.font.size.xxs};
+        }
+    }
+    ${({ theme }) => theme.mq.bigDesktop} {
+        height: 17.5vw;
+        ul {
+            font-size: ${({ theme }) => theme.font.size.xs};
+        }  
+    }
+    ${({secondary}) => (
+        secondary && css`
+            &:before {
+                content: "";
+                background-color: black;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                border-radius: 0.5rem;
+                opacity: 60%;
+            }
+        `
+    )}
 `
 
 export const StyledLink = styled(Link)`
@@ -57,5 +105,7 @@ export const StyledLink = styled(Link)`
 `
 
 export const StyledImage = styled.img`
-  width: 95%;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
 `

@@ -36,6 +36,7 @@ function IndexPage() {
         title="Nasza Oferta"
         items={OffersSectionItems}
         background={({ theme }) => theme.lightGrey}
+        secondary
       />
       <StepsSection>
         {StepsSectionItems.map(({ number, heading, paragraph }) => (
@@ -47,7 +48,7 @@ function IndexPage() {
         ))}
       </StepsSection>
       <GridSection
-        title="GridView"
+        title="Nasze Realizacje"
         items={GallerySectionItems}
         link="Zobacz Wszystkie Realizacje"
         href="/Realizacje"
