@@ -34,4 +34,5 @@ export const StyledImage = styled.img`
     height: 100%;
     border-radius: 1rem;
     object-fit: cover;
+    cursor: pointer;
 `
