@@ -29,7 +29,7 @@ function OnasPage() {
       />
       <Wrapper>
         {ONasItems.map(({ image, title, paragraph }, i) => (
-          <Section>
+          <Section key={i}>
             <Title order={i}>{title}</Title>
             <Paragraph order={i}>{paragraph}</Paragraph>
             <Image src={image} order={i} />

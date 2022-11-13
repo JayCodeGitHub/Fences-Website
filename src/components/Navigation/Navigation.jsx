@@ -35,8 +35,8 @@ function Navigation() {
           <Link to="/">Logo</Link>
         </LogoWrapper>
         <StyledNavigation>
-          {NavigationItems.map(({ name, href }) => (
-            <NavigationItem>
+          {NavigationItems.map(({ name, href }, i) => (
+            <NavigationItem key={i}>
               <Link to={href} activeClassName="active">
                 {name}
               </Link>
@@ -49,8 +49,8 @@ function Navigation() {
       </Wrapper>
       <StyledMobileNavigation isOpen={isOpen}>
         <ul>
-          {NavigationItems.map(({ name, href }) => (
-            <NavigationItem>
+          {NavigationItems.map(({ name, href }, i) => (
+            <NavigationItem key={i}>
               <Link to={href} activeClassName="active">
                 {name}
               </Link>

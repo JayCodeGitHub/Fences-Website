@@ -22,8 +22,8 @@ function RealizacjePage() {
       <Header title="Realizacje" />
       <PopupImage isPopup={isPopup} image={image} setIsPopup={setIsPopup} />
       <Wrapper>
-        {RealizacjeItems.map(({ image }) => (
-          <ImageWrapper>
+        {RealizacjeItems.map(({ image }, i) => (
+          <ImageWrapper key={i}>
             <StyledImage src={image} onClick={() => handleClick(image)} />
           </ImageWrapper>
         ))}

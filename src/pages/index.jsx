@@ -36,8 +36,8 @@ function IndexPage() {
         secondary
       />
       <StepsSection>
-        {StepsSectionItems.map(({ number, heading, paragraph }) => (
-          <div>
+        {StepsSectionItems.map(({ number, heading, paragraph }, i) => (
+          <div key={i}>
             <h3>{number}</h3>
             <h4>{heading}</h4>
             <p>{paragraph}</p>

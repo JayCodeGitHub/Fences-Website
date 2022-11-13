@@ -29,6 +29,7 @@ export const CloseButton = styled.button`
         background-color: ${({theme }) => theme.white};
         display: block;
         transform: translateY(0.25rem) rotate(45deg);
+        border-radius: 5px;
     }
     &:after {
         content: '';
@@ -37,6 +38,7 @@ export const CloseButton = styled.button`
         background-color: ${({theme }) => theme.white};
         display: block;
         transform: translateY(-0.25rem) rotate(-45deg);
+        border-radius: 5px;
     }
 `
 

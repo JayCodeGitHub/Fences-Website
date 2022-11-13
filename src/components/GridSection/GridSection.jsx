@@ -15,16 +15,16 @@ const GridSection = ({ secondary, title, items, link, href, background }) => {
     <OuterWrapper background={background}>
       {title ? <StyledHeading>{title}</StyledHeading> : null}
       <Wrapper>
-        {items.map(({ image, title, list }) => (
-          <GridItem>
+        {items.map(({ image, title, list }, i) => (
+          <GridItem key={i}>
             {secondary ? (
               <ImageWrapper secondary>
                 <span>
                   <h2>{title}</h2>
                   {list ? (
                     <ul>
-                      {list.map((item) => (
-                        <li>{item}</li>
+                      {list.map((item, i) => (
+                        <li key={i}>{item}</li>
                       ))}
                     </ul>
                   ) : null}
