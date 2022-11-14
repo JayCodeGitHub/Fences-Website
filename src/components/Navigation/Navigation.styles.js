@@ -111,7 +111,7 @@ export const HamburgerWrapper = styled.button`
 `
 
 export const Hamburger = styled.div`
-  transition: background-color .15s .05s ease-in-out;
+    transition: background-color .15s .05s ease-in-out;
     background-color: ${({ isOpen, theme }) => (isOpen ? 'transparent' : theme.black)};
     width: 3rem;
     height: 0.3rem;

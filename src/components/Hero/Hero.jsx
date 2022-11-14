@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { Wrapper, StyledHeader, StyledImage } from './Hero.styles';
+import Button from '../Button/Button.styles';
 
 const Hero = ({ secondary, title, button, href, paragraph, photo }) => {
   return (
@@ -9,9 +10,9 @@ const Hero = ({ secondary, title, button, href, paragraph, photo }) => {
         <Wrapper>
           <StyledHeader>
             <h1>{title}</h1>
-            <button>
+            <Button>
               <Link to={href}>{button}</Link>
-            </button>
+            </Button>
           </StyledHeader>
           <StyledImage src={photo} />
         </Wrapper>

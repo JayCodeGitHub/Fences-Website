@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'gatsby';
 import { MainTemplate } from '../templates/MainTemplate';
 import ParagraphBar from '../components/ParagraphBar/ParagraphBar';
 import Hero from '../components/Hero/Hero';
@@ -11,6 +12,7 @@ import {
   StepsSectionItems,
 } from '../assets/items/HomePageItems/HomePageItems';
 import GridSection from '../components/GridSection/GridSection';
+import Button from '../components/Button/Button.styles';
 
 function IndexPage() {
   return (
@@ -43,6 +45,11 @@ function IndexPage() {
             <p>{paragraph}</p>
           </div>
         ))}
+        <div>
+          <Button secondary>
+            <Link to="/Kontakt">Skontaktuj się z nami</Link>
+          </Button>
+        </div>
       </StepsSection>
       <GridSection
         title="Nasze Realizacje"

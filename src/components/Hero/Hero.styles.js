@@ -36,18 +36,7 @@ export const StyledHeader = styled.header`
         width: 100%;
         color: ${({ theme }) => theme.white};
         font-size: ${({ theme }) => theme.font.size.m};
-    }
-    button {
-        border: none;
-        padding: 1rem;
-        margin: 2rem 1rem;
-        background-color: ${({ theme }) => theme.grey};
-        font-size: ${({ theme }) => theme.font.size.xs};
-    }
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
+    }    
     ${({ theme }) => theme.mq.desktop} {
         position: absolute;
         width: 28%;
@@ -55,10 +44,6 @@ export const StyledHeader = styled.header`
         left: 6%;
         h1 {
             font-size: ${({ theme }) => theme.font.size.l};
-        }
-        button {
-            font-size: ${({ theme }) => theme.font.size.s};
-            margin: 4rem 2rem;
         }
     }
     ${({secondary}) => (
