@@ -1,67 +1,148 @@
 import * as React from 'react';
-import { Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import { MainTemplate } from '../templates/MainTemplate';
 import ParagraphBar from '../components/ParagraphBar/ParagraphBar';
 import Hero from '../components/Hero/Hero';
-import Photo from '../assets/images/4.jpeg';
-import { Title, StepsSection } from '../assets/styles/pages/homepage.styles';
+import Title from '../components/Title/Title.styles';
+import StepsSection from '../components/StepsSection/StepsSection';
 import Paragraph from '../components/Paragraph/Paragraph';
-import {
-  OffersSectionItems,
-  GallerySectionItems,
-  StepsSectionItems,
-} from '../assets/items/HomePageItems/HomePageItems';
 import GridSection from '../components/GridSection/GridSection';
-import Button from '../components/Button/Button.styles';
 
-function IndexPage() {
+function IndexPage({ data }) {
   return (
     <MainTemplate>
       <Hero
-        title="Ogrodzenia Poznań i Okolice"
-        button="Nasze Realizacje"
-        href="/Realizacje"
-        photo={Photo}
+        title={data.datoCmsHomepage.title}
+        button={data.datoCmsHomepage.button}
+        href={data.datoCmsHomepage.href}
+        image={data.datoCmsHomepage.image}
+        alt={data.datoCmsHomepage.alt}
       />
-      <Title>lorem ipsum dolor sit amet, lorem ipsum dolor sit amet</Title>
-      <Paragraph>
-        Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
-        laying out print, graphic or web designs. The passage is attributed to
-        an unknown typesetter in the 15th century who is thought to have
-        scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a
-        type specimen book. It usually begins with:
-      </Paragraph>
-      <GridSection
-        title="Nasza Oferta"
-        items={OffersSectionItems}
-        background={({ theme }) => theme.lightGrey}
-        secondary
-      />
-      <StepsSection>
-        {StepsSectionItems.map(({ number, heading, paragraph }, i) => (
-          <div key={i}>
-            <h3>{number}</h3>
-            <h4>{heading}</h4>
-            <p>{paragraph}</p>
-          </div>
-        ))}
-        <div>
-          <Button secondary>
-            <Link to="/Kontakt">Skontaktuj się z nami</Link>
-          </Button>
-        </div>
-      </StepsSection>
-      <GridSection
-        title="Nasze Realizacje"
-        items={GallerySectionItems}
-        link="Zobacz Wszystkie Realizacje"
-        href="/Realizacje"
-        background={({ theme }) => theme.lightGrey}
-      />
-      <ParagraphBar value="Skontaktuj się z nami po darmową wycenę" />
+      {data.datoCmsHomepage.homepage.map(
+        ({ __typename, title, grid, paragraph, steps }) => {
+          switch (__typename) {
+            case 'DatoCmsTitle':
+              return <Title>{title}</Title>;
+            case 'DatoCmsParagraph':
+              return <Paragraph>{paragraph}</Paragraph>;
+            case 'DatoCmsStepsSection':
+              return <StepsSection items={steps} />;
+            case 'DatoCmsOfferSection':
+              return (
+                <GridSection
+                  title={title}
+                  items={grid}
+                  background={({ theme }) => theme.lightGrey}
+                  secondary
+                />
+              );
+            case 'DatoCmsParagraphBarSecondary':
+              return <ParagraphBar secondary value={paragraph} />;
+            case 'DatoCmsRealizationsSection':
+              return (
+                <GridSection
+                  title={title}
+                  items={grid}
+                  link="Zobacz Wszystkie Realizacje"
+                  href="/Realizacje"
+                  background={({ theme }) => theme.lightGrey}
+                />
+              );
+          }
+        },
+      )}
     </MainTemplate>
   );
 }
+
+export const query = graphql`
+  query {
+    datoCmsHomepage {
+      title
+      alt
+      href
+      button
+      image {
+        fluid(maxWidth: 800, maxHeight: 1200) {
+          src
+          srcSet
+          sizes
+        }
+      }
+      homepage {
+        ... on DatoCmsTitle {
+          __typename
+          title
+        }
+        ... on DatoCmsParagraph {
+          __typename
+          paragraph
+        }
+        ... on DatoCmsOfferSection {
+          __typename
+          title
+          grid {
+            ... on DatoCmsGridItem {
+              title
+              alt
+              list {
+                ... on DatoCmsListElement {
+                  listElement
+                }
+              }
+              image {
+                fluid(maxWidth: 800, maxHeight: 1200) {
+                  src
+                  srcSet
+                  sizes
+                }
+              }
+            }
+          }
+        }
+        ... on DatoCmsParagraphBarSecondary {
+          __typename
+          paragraph
+        }
+        ... on DatoCmsRealizationsSection {
+          __typename
+          title
+          grid {
+            ... on DatoCmsGridItem {
+              title
+              alt
+              list {
+                ... on DatoCmsListElement {
+                  listElement
+                }
+              }
+              image {
+                fluid(maxWidth: 800, maxHeight: 1200) {
+                  src
+                  srcSet
+                  sizes
+                }
+              }
+            }
+          }
+        }
+        ... on DatoCmsStepsSection {
+          __typename
+          steps {
+            ... on DatoCmsStep {
+              __typename
+              title
+              number
+              paragraph
+            }
+          }
+          button
+          href
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage;
 

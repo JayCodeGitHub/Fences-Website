@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { Wrapper, StyledHeader, StyledImage } from './Hero.styles';
 import Button from '../Button/Button.styles';
 
-const Hero = ({ secondary, title, button, href, paragraph, image }) => {
+const Hero = ({ secondary, title, button, href, paragraph, image, alt }) => {
   return (
     <>
       {!secondary ? (
@@ -18,6 +18,7 @@ const Hero = ({ secondary, title, button, href, paragraph, image }) => {
             src={image.fluid.src}
             srcSet={image.fluid.srcSet}
             sizes={image.fluid.sizes}
+            alt={alt}
           />
         </Wrapper>
       ) : (
