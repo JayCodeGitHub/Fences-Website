@@ -1,17 +1,38 @@
 import * as React from 'react';
+import { graphql } from 'gatsby';
 import { MainTemplate } from '../templates/MainTemplate';
 import Header from '../components/Header/Header';
 import GridSection from '../components/GridSection/GridSection';
-import { OfertaItems } from '../assets/items/OfertaItems/OfertaItems';
 
-function OfertaPage() {
+function OfertaPage({ data }) {
+  console.log(data.datoCmsOffer.offer);
   return (
     <MainTemplate>
       <Header title="Oferta" />
-      <GridSection items={OfertaItems} secondary />
+      <GridSection items={data.datoCmsOffer.offer} secondary />
     </MainTemplate>
   );
 }
+
+export const query = graphql`
+  query {
+    datoCmsOffer {
+      offer {
+        ... on DatoCmsGridItem {
+          title
+          alt
+          image {
+            fluid(maxWidth: 800, maxHeight: 1200) {
+              src
+              srcSet
+              sizes
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default OfertaPage;
 

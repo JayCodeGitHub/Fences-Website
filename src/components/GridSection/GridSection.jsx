@@ -15,7 +15,7 @@ const GridSection = ({ secondary, title, items, link, href, background }) => {
     <OuterWrapper background={background}>
       {title ? <StyledHeading>{title}</StyledHeading> : null}
       <Wrapper>
-        {items.map(({ image, title, list }, i) => (
+        {items.map(({ image, title, list, alt }, i) => (
           <GridItem key={i}>
             {secondary ? (
               <ImageWrapper secondary>
@@ -29,11 +29,21 @@ const GridSection = ({ secondary, title, items, link, href, background }) => {
                     </ul>
                   ) : null}
                 </span>
-                <StyledImage src={image} />
+                <StyledImage
+                  src={image.fluid.src}
+                  srcSet={image.fluid.srcSet}
+                  sizes={image.fluid.sizes}
+                  alt={alt}
+                />
               </ImageWrapper>
             ) : (
               <ImageWrapper>
-                <StyledImage src={image} />
+                <StyledImage
+                  src={image.fluid.src}
+                  srcSet={image.fluid.srcSet}
+                  sizes={image.fluid.sizes}
+                  alt={alt}
+                />
               </ImageWrapper>
             )}
           </GridItem>

@@ -36,7 +36,7 @@ function RealizacjePage({ data }) {
               srcSet={image.fluid.srcSet}
               sizes={image.fluid.sizes}
               alt={alt}
-              onClick={() => handleClick({ image, alt })}
+              onClick={() => handleClick(image, alt)}
             />
           </ImageWrapper>
         ))}
@@ -52,7 +52,7 @@ export const query = graphql`
         id
         alt
         image {
-          fluid {
+          fluid(maxWidth: 800, maxHeight: 1200) {
             src
             srcSet
             sizes

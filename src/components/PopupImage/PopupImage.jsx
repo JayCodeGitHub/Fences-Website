@@ -7,9 +7,9 @@ const PopupImage = ({ isPopup, setIsPopup, image, alt }) => {
       {image ? (
         <Wrapper isPopup={isPopup}>
           <StyledImage
-            src={image.image.fluid.src}
-            srcSet={image.image.fluid.srcSet}
-            sizes={image.image.fluid.sizes}
+            src={image.fluid.src}
+            srcSet={image.fluid.srcSet}
+            sizes={image.fluid.sizes}
             alt={alt}
           />
           <CloseButton onClick={() => setIsPopup(false)} />
