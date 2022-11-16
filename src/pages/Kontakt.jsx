@@ -15,7 +15,6 @@ import MailIcon from '../assets/icons/MailIcon.svg';
 import ParagraphBar from '../components/ParagraphBar/ParagraphBar';
 
 function KontaktPage({ data }) {
-  console.log(data.datoCmsContact.phone);
   return (
     <MainTemplate>
       <Header title="Kontakt" />
@@ -47,7 +46,10 @@ function KontaktPage({ data }) {
           ></StyledMap>
         </MapWrapper>
       </Wrapper>
-      <ParagraphBar value={data.datoCmsContact.paragraphBarSecondary} />
+      <ParagraphBar
+        secondary
+        value={data.datoCmsContact.paragraphBarSecondary}
+      />
     </MainTemplate>
   );
 }

@@ -7,13 +7,13 @@ export const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: ${({ secondary, theme}) => (secondary ? theme.grey : theme.primary)};
-    font-size: ${({ secondary, theme}) => (secondary ? theme.font.size.xs : theme.font.size.s)};
-    font-weight: ${({ secondary}) => (secondary ? 'normal' : 'bold')};
-    color: ${({ secondary, theme}) => (secondary ? theme.black : theme.white)};
+    background-color: ${({ secondary, theme}) => (secondary ? theme.primary: theme.grey)};
+    font-size: ${({ secondary, theme}) => (secondary ? theme.font.size.s: theme.font.size.xs)};
+    font-weight: ${({ secondary}) => (secondary ? 'bold' : 'normal')};
+    color: ${({ secondary, theme}) => (secondary ? theme.white: theme.black)};
     ${({ theme }) => theme.mq.desktop} {
         font-size: ${({ theme }) => theme.font.size.s};
-        height: ${({ secondary}) => (secondary ? '15rem' : '12rem')};
+        height: ${({ secondary}) => (secondary ? '12rem' : '15rem')};
     }
     span {
         width: 80%;

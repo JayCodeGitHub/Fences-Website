@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { Wrapper, StyledHeader, StyledImage } from './Hero.styles';
 import Button from '../Button/Button.styles';
 
-const Hero = ({ secondary, title, button, href, paragraph, photo }) => {
+const Hero = ({ secondary, title, button, href, paragraph, image }) => {
   return (
     <>
       {!secondary ? (
@@ -14,10 +14,14 @@ const Hero = ({ secondary, title, button, href, paragraph, photo }) => {
               <Link to={href}>{button}</Link>
             </Button>
           </StyledHeader>
-          <StyledImage src={photo} />
+          <StyledImage
+            src={image.fluid.src}
+            srcSet={image.fluid.srcSet}
+            sizes={image.fluid.sizes}
+          />
         </Wrapper>
       ) : (
-        <Wrapper secondary background={photo}>
+        <Wrapper secondary background={image.fluid.src}>
           <StyledHeader secondary>
             <h1>{title}</h1>
             <p>{paragraph}</p>

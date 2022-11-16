@@ -1,8 +1,8 @@
 import * as React from 'react';
+import { graphql } from 'gatsby';
 import { MainTemplate } from '../templates/MainTemplate';
 import Header from '../components/Header/Header';
 import Hero from '../components/Hero/Hero';
-import Photo from '../assets/images/2.jpg';
 import ParagraphBar from '../components/ParagraphBar/ParagraphBar';
 import {
   Wrapper,
@@ -11,35 +11,71 @@ import {
   Paragraph,
   Image,
 } from '../assets/styles/pages/o-nas.styles';
-import { ONasItems } from '../assets/items/ONasItems/ONasItems';
 
-function OnasPage() {
+function OnasPage({ data }) {
+  console.log(data.datoCmsAbout.about);
   return (
     <MainTemplate>
       <Header title="O Nas" />
       <Hero
         secondary
-        photo={Photo}
-        title="Lorem ipsum"
-        paragraph="Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century."
+        image={data.datoCmsAbout.image}
+        title={data.datoCmsAbout.title}
+        paragraph={data.datoCmsAbout.paragraph}
       />
-      <ParagraphBar
-        secondary
-        value="lorem ipsum dolor sit amet, lorem ipsum dolor sit amet"
-      />
+      <ParagraphBar value={data.datoCmsAbout.paragraphBar} />
       <Wrapper>
-        {ONasItems.map(({ image, title, paragraph }, i) => (
+        {data.datoCmsAbout.about.map(({ image, title, paragraph }, i) => (
           <Section key={i}>
             <Title order={i}>{title}</Title>
             <Paragraph order={i}>{paragraph}</Paragraph>
-            <Image src={image} order={i} />
+            <Image
+              src={image.fluid.src}
+              srcSet={image.fluid.srcSet}
+              sizes={image.fluid.sizes}
+              order={i}
+            />
           </Section>
         ))}
       </Wrapper>
-      <ParagraphBar value="Skontaktuj się z nami po darmową wycenę" />
+      <ParagraphBar secondary value={data.datoCmsAbout.paragraphBarSecondary} />
     </MainTemplate>
   );
 }
+
+export const query = graphql`
+  query {
+    datoCmsAbout {
+      title
+      paragraph
+      alt
+      image {
+        fluid(maxWidth: 800, maxHeight: 1200) {
+          src
+          srcSet
+          sizes
+        }
+      }
+      paragraphBar
+      paragraphBarSecondary
+      about {
+        ... on DatoCmsSection {
+          __typename
+          title
+          paragraph
+          alt
+          image {
+            fluid(maxWidth: 800, maxHeight: 1200) {
+              src
+              srcSet
+              sizes
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default OnasPage;
 

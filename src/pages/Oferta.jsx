@@ -5,7 +5,6 @@ import Header from '../components/Header/Header';
 import GridSection from '../components/GridSection/GridSection';
 
 function OfertaPage({ data }) {
-  console.log(data.datoCmsOffer.offer);
   return (
     <MainTemplate>
       <Header title="Oferta" />
