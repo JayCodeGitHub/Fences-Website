@@ -23,8 +23,8 @@ const GridSection = ({ secondary, title, items, link, href, background }) => {
                   <h2>{title}</h2>
                   {list ? (
                     <ul>
-                      {list.map((item, i) => (
-                        <li key={i}>{item}</li>
+                      {list.map(({ listElement }, i) => (
+                        <li key={i}>{listElement}</li>
                       ))}
                     </ul>
                   ) : null}

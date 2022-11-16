@@ -1,32 +1,59 @@
 import * as React from 'react';
+import { graphql } from 'gatsby';
 import { MainTemplate } from '../templates/MainTemplate';
 import Header from '../components/Header/Header';
 import Paragraph from '../components/Paragraph/Paragraph';
 import GridSection from '../components/GridSection/GridSection';
-import { ObszarDzialaniaItems } from '../assets/items/ObszarDzialaniaItems/ObszarDzialaniaItems';
 
-function ObszarDzialaniaPage() {
+function ObszarDzialaniaPage({ data }) {
   return (
     <MainTemplate>
       <Header title="Obszar Działania" />
-      <Paragraph>
-        Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
-        laying out print, graphic or web designs. The passage is attributed to
-        an unknown typesetter in the 15th century who is thought to have
-        scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a
-        type specimen book. It usually begins with:
-      </Paragraph>
-      <Paragraph>
-        Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
-        laying out print, graphic or web designs. The passage is attributed to
-        an unknown typesetter in the 15th century who is thought to have
-        scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a
-        type specimen book. It usually begins with:
-      </Paragraph>
-      <GridSection items={ObszarDzialaniaItems} secondary />
+      {data.datoCmsArea.area.map(({ __typename, paragraph, grid }) => {
+        switch (__typename) {
+          case 'DatoCmsParagraph':
+            return <Paragraph>{paragraph}</Paragraph>;
+          case 'DatoCmsGrid':
+            return <GridSection items={grid} secondary />;
+        }
+      })}
     </MainTemplate>
   );
 }
+
+export const query = graphql`
+  query {
+    datoCmsArea {
+      area {
+        ... on DatoCmsParagraph {
+          __typename
+          paragraph
+        }
+        ... on DatoCmsGrid {
+          __typename
+          grid {
+            ... on DatoCmsGridItem {
+              title
+              alt
+              list {
+                ... on DatoCmsListElement {
+                  listElement
+                }
+              }
+              image {
+                fluid(maxWidth: 800, maxHeight: 1200) {
+                  src
+                  srcSet
+                  sizes
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default ObszarDzialaniaPage;
 
