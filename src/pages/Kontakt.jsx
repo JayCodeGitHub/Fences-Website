@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { graphql } from 'gatsby';
 import { MainTemplate } from '../templates/MainTemplate';
 import Header from '../components/Header/Header';
 import {
@@ -13,7 +14,8 @@ import PhoneIcon from '../assets/icons/PhoneIcon.svg';
 import MailIcon from '../assets/icons/MailIcon.svg';
 import ParagraphBar from '../components/ParagraphBar/ParagraphBar';
 
-function KontaktPage() {
+function KontaktPage({ data }) {
+  console.log(data.datoCmsContact.phone);
   return (
     <MainTemplate>
       <Header title="Kontakt" />
@@ -21,18 +23,18 @@ function KontaktPage() {
         <ContactItemsWrapper>
           <ContactItem>
             <PhoneIcon />
-            <p>999 888 333</p>
+            <p>{data.datoCmsContact.phone}</p>
           </ContactItem>
           <ContactItem>
             <MailIcon />
-            <p>kontakt@gmail.com</p>
+            <p>{data.datoCmsContact.email}</p>
           </ContactItem>
           <CompanyData>
-            <p>Nazwa Firmy</p>
-            <p>Adres</p>
-            <p>Kod Pocztowy</p>
-            <p>NIP 00000000000</p>
-            <p>REGON 0000000</p>
+            <p>{data.datoCmsContact.companyName}</p>
+            <p>{data.datoCmsContact.address}</p>
+            <p>{data.datoCmsContact.postalCode}</p>
+            <p>{data.datoCmsContact.nip}</p>
+            <p>{data.datoCmsContact.regon}</p>
           </CompanyData>
         </ContactItemsWrapper>
         <MapWrapper>
@@ -45,10 +47,25 @@ function KontaktPage() {
           ></StyledMap>
         </MapWrapper>
       </Wrapper>
-      <ParagraphBar value="Skontaktuj się z nami po darmową wycenę" />
+      <ParagraphBar value={data.datoCmsContact.paragraphBarSecondary} />
     </MainTemplate>
   );
 }
+
+export const query = graphql`
+  query {
+    datoCmsContact {
+      phone
+      email
+      companyName
+      address
+      postalCode
+      nip
+      regon
+      paragraphBarSecondary
+    }
+  }
+`;
 
 export default KontaktPage;
 
