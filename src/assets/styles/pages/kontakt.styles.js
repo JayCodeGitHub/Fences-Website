@@ -12,6 +12,11 @@ export const Wrapper = styled.div`
     ${({ theme }) => theme.mq.bigDesktop} {
         padding: 0 12vw 2rem 12vw;
     }
+    a {
+        width: 100%;
+        color: inherit;
+        text-decoration: none;
+    }
 `
 export const ContactItemsWrapper = styled.div`
     width: 100%;
@@ -34,6 +39,8 @@ export const ContactItem = styled.span`
     padding-left: 1rem;
     position: relative;
     z-index: -10;
+    color: inherit;
+    text-decoration: none;
     p {
         margin: 0 0 0 5rem;
         width: 15rem;

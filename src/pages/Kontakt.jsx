@@ -21,18 +21,24 @@ function KontaktPage({ data }) {
       <Header title="Kontakt" />
       <Wrapper>
         <ContactItemsWrapper>
-          <ContactItem>
-            <PhoneIcon />
-            <p>{data.datoCmsContact.phone}</p>
-          </ContactItem>
-          <ContactItem>
-            <MailIcon />
-            <p>{data.datoCmsContact.email}</p>
-          </ContactItem>
-          <ContactItem>
-            <FacebookIcon className="fill" />
-            <p>facebook</p>
-          </ContactItem>
+          <a href={'tel:' + data.datoCmsContact.phone}>
+            <ContactItem>
+              <PhoneIcon />
+              <p>{data.datoCmsContact.phone}</p>
+            </ContactItem>
+          </a>
+          <a href={'mailto:' + data.datoCmsContact.email}>
+            <ContactItem>
+              <MailIcon />
+              <p>{data.datoCmsContact.email}</p>
+            </ContactItem>
+          </a>
+          <a href={data.datoCmsContact.facebook} target="_blank">
+            <ContactItem>
+              <FacebookIcon className="fill" />
+              <p>facebook</p>
+            </ContactItem>
+          </a>
           <CompanyData>
             <p>{data.datoCmsContact.companyName}</p>
             <p>{data.datoCmsContact.address}</p>
