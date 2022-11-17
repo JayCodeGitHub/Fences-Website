@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 
 export const Wrapper = styled.div`
     padding: 2.5vw;
@@ -12,6 +12,15 @@ export const Wrapper = styled.div`
     }
 `
 
+const intro = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`
+
 export const ImageWrapper = styled.div`
     width: 100%;
     display: flex;
@@ -19,6 +28,8 @@ export const ImageWrapper = styled.div`
     align-items: center;
     padding: 2rem;
     height: 70vw;
+    opacity: 0;
+    animation: ${intro} 0.5s 0.5s forwards;
     ${({ theme }) => theme.mq.desktop} {
         width: 33.33%;
         max-height: 23vw;

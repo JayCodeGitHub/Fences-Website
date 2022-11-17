@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components";
+import styled, {css, keyframes} from "styled-components";
 
 export const Wrapper = styled.div`
     background-color: ${({ theme }) => theme.primary};
@@ -28,6 +28,15 @@ export const Wrapper = styled.div`
     )}
 `
 
+const intro = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`
+
 export const StyledHeader = styled.header`
     width: 80%;
     padding: 3rem 0; 
@@ -36,6 +45,8 @@ export const StyledHeader = styled.header`
         width: 100%;
         color: ${({ theme }) => theme.white};
         font-size: ${({ theme }) => theme.font.size.m};
+        opacity: 0;
+        animation: ${intro} 0.5s 0.5s forwards;
     }    
     ${({ theme }) => theme.mq.desktop} {
         position: absolute;
@@ -53,6 +64,8 @@ export const StyledHeader = styled.header`
             position: absolute;
             top: 40%;
             background-color: ${({ theme }) => theme.primary};
+            opacity: 0;
+        animation: ${intro} 0.5s 0.5s forwards;
             h1 {
                 font-size: ${({ theme }) => theme.font.size.s};
             }
@@ -82,6 +95,8 @@ export const StyledImage = styled.img`
     position: absolute;
     object-fit: cover;
     top: 35%;
+    opacity: 0;
+    animation: ${intro} 0.5s 1.2s forwards;
     ${({ theme }) => theme.mq.desktop} {
         width: 45%;
         height: auto;

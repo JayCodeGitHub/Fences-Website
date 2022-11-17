@@ -1,5 +1,14 @@
-import styled, {css} from "styled-components";
+import styled, {css, keyframes} from "styled-components";
 import { Link } from 'gatsby';
+
+const intro = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 export const OuterWrapper = styled.section`
     width: 100%;
@@ -7,6 +16,8 @@ export const OuterWrapper = styled.section`
     padding: 5vw;
     display: flex;
     flex-direction: column;
+    opacity: 0;
+  animation: ${intro} 0.5s 0.5s forwards;
     ${({ theme }) => theme.mq.bigDesktop} {
         padding: 4vw 12vw 4vw 12vw;
     }

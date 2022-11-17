@@ -1,8 +1,19 @@
-import styled from "styled-components"
+import styled, {keyframes} from "styled-components";
+
+const intro = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`
 
 const Title = styled.h2`
     width: 100%;
     padding: 8vw 5vw;
+    opacity: 0;
+    animation: ${intro} 0.5s 0.5s forwards;
     font-size: ${({ theme }) => theme.font.size.m};
     ${({ theme }) => theme.mq.desktop} {
         display: flex;
