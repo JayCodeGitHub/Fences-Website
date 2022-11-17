@@ -101,7 +101,7 @@ export const ContactItem = styled.span`
     svg {
         height: 25px;
         stroke: ${({ theme }) => theme.white};
-        &.facebook {
+        &.fill {
             fill: ${({ theme }) => theme.white};
             stroke: ${({ theme }) => theme.black};
         }

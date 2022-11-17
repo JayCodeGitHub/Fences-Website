@@ -12,6 +12,7 @@ import {
 } from '../assets/styles/pages/kontakt.styles';
 import PhoneIcon from '../assets/icons/PhoneIcon.svg';
 import MailIcon from '../assets/icons/MailIcon.svg';
+import FacebookIcon from '../assets/icons/FacebookIcon.svg';
 import ParagraphBar from '../components/ParagraphBar/ParagraphBar';
 
 function KontaktPage({ data }) {
@@ -27,6 +28,10 @@ function KontaktPage({ data }) {
           <ContactItem>
             <MailIcon />
             <p>{data.datoCmsContact.email}</p>
+          </ContactItem>
+          <ContactItem>
+            <FacebookIcon className="fill" />
+            <p>facebook</p>
           </ContactItem>
           <CompanyData>
             <p>{data.datoCmsContact.companyName}</p>
@@ -65,6 +70,7 @@ export const query = graphql`
       nip
       regon
       paragraphBarSecondary
+      facebook
     }
   }
 `;

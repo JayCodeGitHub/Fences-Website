@@ -43,6 +43,9 @@ export const ContactItem = styled.span`
     svg {
         height: 40px;
         stroke: ${({ theme }) => theme.primary};
+        &.fill {
+            fill: ${({ theme }) => theme.primary};
+        }
     }
     &::before {
         content: '';

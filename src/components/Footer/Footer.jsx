@@ -55,7 +55,7 @@ const Footer = () => {
             <p>{data.datoCmsContact.email}</p>
           </ContactItem>
           <ContactItem>
-            <FacebookIcon className="facebook" />
+            <FacebookIcon className="fill" />
             <p>facebook</p>
           </ContactItem>
         </ContactItemsWrapper>
