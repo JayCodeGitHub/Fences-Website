@@ -13,6 +13,7 @@ module.exports = {
         apiToken: process.env.API_DATO_CMS,
       },
     },
+    'gatsby-plugin-styled-components',
   {
     resolve: 'gatsby-plugin-google-fonts',
     options: {
