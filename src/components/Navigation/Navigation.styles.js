@@ -31,10 +31,12 @@ export const ContactItemsWrapper = styled.div`
             margin: 0;
         color: ${({ theme }) => theme.black};
         }  
-        span {
+        a {
             display: flex;
             align-items: center;
             justify-content: center;
+            color: inherit;
+            text-decoration: none;
         svg {
             height: 25px;
             stroke: ${({ theme }) => theme.primary};  
@@ -172,10 +174,12 @@ export const MobileContactItemsWrapper = styled.div`
             color: black;
         font-size: ${({ theme }) => theme.font.size.xs};
     }  
-    span {
+    a {
         display: flex;
         align-items: center;
         justify-content: center;
+        color: inherit;
+        text-decoration: none;
         svg {
             height: 25px;
         }

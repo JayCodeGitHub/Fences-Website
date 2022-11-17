@@ -29,14 +29,14 @@ function Navigation() {
   return (
     <OuterWrapper>
       <ContactItemsWrapper>
-        <span>
+        <a href={'tel:' + data.datoCmsContact.phone}>
           <PhoneIcon />
           <p>{data.datoCmsContact.phone}</p>
-        </span>
-        <span>
+        </a>
+        <a href={'mailto:' + data.datoCmsContact.email}>
           <MailIcon />
           <p>{data.datoCmsContact.email}</p>
-        </span>
+        </a>
       </ContactItemsWrapper>
       <Wrapper>
         <LogoWrapper onClick={() => setIsOpen(false)}>
@@ -66,14 +66,14 @@ function Navigation() {
           ))}
         </ul>
         <MobileContactItemsWrapper>
-          <span>
+          <a href={'tel:' + data.datoCmsContact.phone}>
             <PhoneIcon />
             <p>{data.datoCmsContact.phone}</p>
-          </span>
-          <span>
+          </a>
+          <a href={'mailto:' + data.datoCmsContact.email}>
             <MailIcon />
             <p>{data.datoCmsContact.email}</p>
-          </span>
+          </a>
         </MobileContactItemsWrapper>
       </StyledMobileNavigation>
     </OuterWrapper>
