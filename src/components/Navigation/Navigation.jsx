@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 import {
   OuterWrapper,
   ContactItemsWrapper,
@@ -17,17 +17,25 @@ import PhoneIcon from '../../assets/icons/PhoneIcon.svg';
 import MailIcon from '../../assets/icons/MailIcon.svg';
 
 function Navigation() {
+  const data = useStaticQuery(graphql`
+    query {
+      datoCmsContact {
+        phone
+        email
+      }
+    }
+  `);
   const [isOpen, setIsOpen] = useState(false);
   return (
     <OuterWrapper>
       <ContactItemsWrapper>
         <span>
           <PhoneIcon />
-          <p>999 888 333</p>
+          <p>{data.datoCmsContact.phone}</p>
         </span>
         <span>
           <MailIcon />
-          <p>kontakt@gmail.com</p>
+          <p>{data.datoCmsContact.email}</p>
         </span>
       </ContactItemsWrapper>
       <Wrapper>
@@ -60,11 +68,11 @@ function Navigation() {
         <MobileContactItemsWrapper>
           <span>
             <PhoneIcon />
-            <p>999 888 333</p>
+            <p>{data.datoCmsContact.phone}</p>
           </span>
           <span>
             <MailIcon />
-            <p>kontakt@gmail.com</p>
+            <p>{data.datoCmsContact.email}</p>
           </span>
         </MobileContactItemsWrapper>
       </StyledMobileNavigation>
