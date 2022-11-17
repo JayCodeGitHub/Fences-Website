@@ -90,10 +90,12 @@ export const ContactItemsWrapper = styled.div`
     }
 `
 
-export const ContactItem = styled.span`  
+export const ContactItem = styled.a`
     display: flex;
     align-items: center;
     padding: 1.2rem 0rem 1.2rem 4rem;
+    text-decoration: none;
+    color: inherit;
     p {
         margin: 0;
         font-size: ${({ theme }) => theme.font.size.xs};

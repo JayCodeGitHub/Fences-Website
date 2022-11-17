@@ -46,15 +46,15 @@ const Footer = () => {
         </NavigationWrapper>
         <ContactItemsWrapper>
           <HeadingWrapper>SZYBKI KONTAKT</HeadingWrapper>
-          <ContactItem>
+          <ContactItem href={'tel:' + data.datoCmsContact.phone}>
             <PhoneIcon />
             <p>{data.datoCmsContact.phone}</p>
           </ContactItem>
-          <ContactItem>
+          <ContactItem href={'mailto:' + data.datoCmsContact.email}>
             <MailIcon />
             <p>{data.datoCmsContact.email}</p>
           </ContactItem>
-          <ContactItem>
+          <ContactItem href={data.datoCmsContact.facebook} target="_blank">
             <FacebookIcon className="fill" />
             <p>facebook</p>
           </ContactItem>
