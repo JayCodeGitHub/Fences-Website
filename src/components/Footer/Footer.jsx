@@ -14,6 +14,7 @@ import {
 import PhoneIcon from '../../assets/icons/PhoneIcon.svg';
 import MailIcon from '../../assets/icons/MailIcon.svg';
 import ArrowUpRightIcon from '../../assets/icons/ArrowUpRight.svg';
+import FacebookIcon from '../../assets/icons/FacebookIcon.svg';
 import { NavigationItems } from '../../assets/items/NavigationItems/NavigationItems';
 
 const Footer = () => {
@@ -22,6 +23,7 @@ const Footer = () => {
       datoCmsContact {
         phone
         email
+        facebook
       }
     }
   `);
@@ -51,6 +53,10 @@ const Footer = () => {
           <ContactItem>
             <MailIcon />
             <p>{data.datoCmsContact.email}</p>
+          </ContactItem>
+          <ContactItem>
+            <FacebookIcon className="facebook" />
+            <p>facebook</p>
           </ContactItem>
         </ContactItemsWrapper>
       </Wrapper>

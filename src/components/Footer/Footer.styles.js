@@ -93,14 +93,18 @@ export const ContactItemsWrapper = styled.div`
 export const ContactItem = styled.span`  
     display: flex;
     align-items: center;
-    padding: 2rem 0rem 2rem 4rem;
+    padding: 1.2rem 0rem 1.2rem 4rem;
     p {
         margin: 0;
         font-size: ${({ theme }) => theme.font.size.xs};
     }  
     svg {
         height: 25px;
-        stroke: ${({ theme }) => theme.white};      
+        stroke: ${({ theme }) => theme.white};
+        &.facebook {
+            fill: ${({ theme }) => theme.white};
+            stroke: ${({ theme }) => theme.black};
+        }
     }
 `
 
