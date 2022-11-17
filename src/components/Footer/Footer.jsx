@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 import {
   OuterWrapper,
   Wrapper,
@@ -14,8 +14,17 @@ import {
 import PhoneIcon from '../../assets/icons/PhoneIcon.svg';
 import MailIcon from '../../assets/icons/MailIcon.svg';
 import ArrowUpRightIcon from '../../assets/icons/ArrowUpRight.svg';
+import { NavigationItems } from '../../assets/items/NavigationItems/NavigationItems';
 
 const Footer = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      datoCmsContact {
+        phone
+        email
+      }
+    }
+  `);
   return (
     <OuterWrapper>
       <Wrapper>
@@ -24,42 +33,24 @@ const Footer = () => {
             <Link to="/">Logo</Link>
           </HeadingWrapper>
           <StyledNavigation>
-            <NavigationItem>
-              <Link to="/O-Nas" activeClassName="active">
-                O Nas
-              </Link>
-            </NavigationItem>
-            <NavigationItem>
-              <Link to="/Oferta" activeClassName="active">
-                Oferta
-              </Link>
-            </NavigationItem>
-            <NavigationItem>
-              <Link to="/Obszar-Dzialania" activeClassName="active">
-                Obszar Działania
-              </Link>
-            </NavigationItem>
-            <NavigationItem>
-              <Link to="/Realizacje" activeClassName="active">
-                Realizacje
-              </Link>
-            </NavigationItem>
-            <NavigationItem>
-              <Link to="/Kontakt" activeClassName="active">
-                Kontakt
-              </Link>
-            </NavigationItem>
+            {NavigationItems.map(({ name, href }, i) => (
+              <NavigationItem key={i}>
+                <Link to={href} activeClassName="active">
+                  {name}
+                </Link>
+              </NavigationItem>
+            ))}
           </StyledNavigation>
         </NavigationWrapper>
         <ContactItemsWrapper>
           <HeadingWrapper>SZYBKI KONTAKT</HeadingWrapper>
           <ContactItem>
             <PhoneIcon />
-            <p>999 888 333</p>
+            <p>{data.datoCmsContact.phone}</p>
           </ContactItem>
           <ContactItem>
             <MailIcon />
-            <p>kontakt@gmail.com</p>
+            <p>{data.datoCmsContact.email}</p>
           </ContactItem>
         </ContactItemsWrapper>
       </Wrapper>
