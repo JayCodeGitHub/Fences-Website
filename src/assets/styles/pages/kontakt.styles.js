@@ -102,9 +102,8 @@ export const MapWrapper = styled.div`
         height: 100%;
         width: 40%;
     }
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
 `
-
-export const StyledMap = styled.iframe`
-    width: 100%;
-    height: 100%;
-`;
