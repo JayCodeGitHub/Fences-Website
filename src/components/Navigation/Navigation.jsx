@@ -51,7 +51,10 @@ function Navigation() {
             </NavigationItem>
           ))}
         </StyledNavigation>
-        <HamburgerWrapper onClick={() => setIsOpen(!isOpen)}>
+        <HamburgerWrapper
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="hamburger menu button"
+        >
           <Hamburger isOpen={isOpen} />
         </HamburgerWrapper>
       </Wrapper>
