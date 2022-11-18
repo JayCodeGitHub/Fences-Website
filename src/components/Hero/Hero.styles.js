@@ -8,7 +8,10 @@ export const Wrapper = styled.div`
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    height: 50rem;
+    height: 90vw;
+    ${({ theme }) => theme.mq.tablet} {
+    height: 70vw;
+    }
     ${({ theme }) => theme.mq.desktop} {
         position: relative;
         margin: 11.5rem 0 15rem 0;
@@ -20,9 +23,11 @@ export const Wrapper = styled.div`
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            margin: 0 0 10rem 0;
+            margin: 0 0 15rem 0;
+            height: 110vw;
             ${({ theme }) => theme.mq.desktop} {
-                margin: 0 0 15rem 0;    
+                margin: 0 0 15rem 0;
+                height: 60rem;
             }
         `
     )}
@@ -65,7 +70,8 @@ export const StyledHeader = styled.header`
             top: 40%;
             background-color: ${({ theme }) => theme.primary};
             opacity: 0;
-        animation: ${intro} 0.5s 0.5s forwards;
+            animation: ${intro} 0.5s 0.5s forwards;
+            
             h1 {
                 font-size: ${({ theme }) => theme.font.size.s};
             }
@@ -91,12 +97,10 @@ export const StyledHeader = styled.header`
 
 export const StyledImage = styled.img`
     width: 80%;
-    height: 40rem;
-    position: absolute;
+    position: relative;
     object-fit: cover;
-    top: 35%;
-    opacity: 0;
     animation: ${intro} 0.5s 1.2s forwards;
+    opacity: 0;
     ${({ theme }) => theme.mq.desktop} {
         width: 45%;
         height: auto;
