@@ -14,6 +14,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-styled-components',
+  "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp",
   {
     resolve: 'gatsby-plugin-google-fonts',
     options: {
@@ -31,5 +32,5 @@ module.exports = {
       },
     },
   },
-  "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp"]
+]
 };
