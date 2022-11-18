@@ -25,7 +25,7 @@ function OnasPage({ data }) {
       />
       <ParagraphBar value={data.datoCmsAbout.paragraphBar} />
       <Wrapper>
-        {data.datoCmsAbout.about.map(({ image, title, paragraph }, i) => (
+        {data.datoCmsAbout.about.map(({ image, title, paragraph, alt }, i) => (
           <Section key={i}>
             <Title order={i}>{title}</Title>
             <Paragraph order={i}>{paragraph}</Paragraph>
@@ -34,6 +34,7 @@ function OnasPage({ data }) {
               srcSet={image.fluid.srcSet}
               sizes={image.fluid.sizes}
               order={i}
+              alt={alt}
             />
           </Section>
         ))}
