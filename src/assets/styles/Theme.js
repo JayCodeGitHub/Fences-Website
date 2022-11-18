@@ -28,3 +28,4 @@ export const theme = {
       huge: '@media (min-width: 1536px)',
     },
   };
+  
