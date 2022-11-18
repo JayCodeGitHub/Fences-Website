@@ -13,7 +13,7 @@ export const Wrapper = styled.section`
         align-items: center;
         flex-direction: column;
         width: 100%;
-        margin: 2vw 0;
+        margin: 1vw 0;
     }
     h3 {
         color: ${({ theme }) => theme.primary};
@@ -34,4 +34,10 @@ export const Wrapper = styled.section`
         }
         padding: 2vw 12vw 2vw 12vw;
     }
+`
+
+export const Title = styled.h2`
+    width: 100%;
+    text-align: center;
+    font-size: ${({ theme }) => theme.font.size.s};
 `

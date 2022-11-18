@@ -19,20 +19,20 @@ function IndexPage({ data }) {
         alt={data.datoCmsHomepage.alt}
       />
       {data.datoCmsHomepage.homepage.map(
-        ({ __typename, title, grid, paragraph, steps }) => {
+        ({ __typename, title, grid, paragraph, steps, href, button }) => {
           switch (__typename) {
             case 'DatoCmsTitle':
               return <Title>{title}</Title>;
             case 'DatoCmsParagraph':
               return <Paragraph>{paragraph}</Paragraph>;
             case 'DatoCmsStepsSection':
-              return <StepsSection items={steps} />;
+              return <StepsSection items={steps} href={href} button={button} />;
             case 'DatoCmsOfferSection':
               return (
                 <GridSection
                   title={title}
                   items={grid}
-                  background={({ theme }) => theme.lightGrey}
+                  background={({ theme }) => theme.grey}
                   secondary
                 />
               );
@@ -45,7 +45,7 @@ function IndexPage({ data }) {
                   items={grid}
                   link="Zobacz Wszystkie Realizacje"
                   href="/Realizacje"
-                  background={({ theme }) => theme.lightGrey}
+                  background={({ theme }) => theme.grey}
                 />
               );
           }
@@ -128,6 +128,7 @@ export const query = graphql`
         }
         ... on DatoCmsStepsSection {
           __typename
+          title
           steps {
             ... on DatoCmsStep {
               __typename

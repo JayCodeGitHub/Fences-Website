@@ -1,21 +1,22 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import Button from '../Button/Button.styles';
-import { Wrapper } from './StepsSection.styles';
+import { Wrapper, Title } from './StepsSection.styles';
 
-const StepsSection = ({ items }) => {
+const StepsSection = ({ items, href, button }) => {
   return (
     <Wrapper>
-      {items.map(({ number, heading, paragraph }, i) => (
+      <Title>Wspułpraca</Title>
+      {items.map(({ number, title, paragraph }, i) => (
         <div key={i}>
           <h3>{number}</h3>
-          <h4>{heading}</h4>
+          <h4>{title}</h4>
           <p>{paragraph}</p>
         </div>
       ))}
       <div>
         <Button secondary>
-          <Link to="/Kontakt">Skontaktuj się z nami</Link>
+          <Link to={href}>{button}</Link>
         </Button>
       </div>
     </Wrapper>
