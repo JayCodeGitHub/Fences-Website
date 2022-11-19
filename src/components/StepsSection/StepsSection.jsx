@@ -3,10 +3,10 @@ import { Link } from 'gatsby';
 import Button from '../Button/Button.styles';
 import { Wrapper, Title } from './StepsSection.styles';
 
-const StepsSection = ({ items, href, button }) => {
+const StepsSection = ({ items, href, button, title }) => {
   return (
     <Wrapper>
-      <Title>Wspułpraca</Title>
+      <Title>{title}</Title>
       {items.map(({ number, title, paragraph }, i) => (
         <div key={i}>
           <h3>{number}</h3>

@@ -26,7 +26,14 @@ function IndexPage({ data }) {
             case 'DatoCmsParagraph':
               return <Paragraph>{paragraph}</Paragraph>;
             case 'DatoCmsStepsSection':
-              return <StepsSection items={steps} href={href} button={button} />;
+              return (
+                <StepsSection
+                  items={steps}
+                  href={href}
+                  button={button}
+                  title={title}
+                />
+              );
             case 'DatoCmsOfferSection':
               return (
                 <GridSection

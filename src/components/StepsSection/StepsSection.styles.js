@@ -40,4 +40,8 @@ export const Title = styled.h2`
     width: 100%;
     text-align: center;
     font-size: ${({ theme }) => theme.font.size.s};
+    ${({ theme }) => theme.mq.desktop} {
+        font-size: ${({ theme }) => theme.font.size.m};
+
+    }
 `
