@@ -1,4 +1,5 @@
 import styled, {keyframes} from "styled-components";
+import Button from '../../../components/Button/Button.styles'
 
 export const Wrapper = styled.div`
     padding: 2.5vw;
@@ -46,4 +47,18 @@ export const StyledImage = styled.img`
     border-radius: 1rem;
     object-fit: cover;
     cursor: pointer;
+`
+
+export const ButtonWrapper = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5rem;
+    a {
+        text-decoration: none;
+    }
+`
+
+export const StyledButton = styled(Button)`
+    margin: 0;
 `

@@ -6,8 +6,11 @@ import {
   Wrapper,
   ImageWrapper,
   StyledImage,
+  ButtonWrapper,
+  StyledButton,
 } from '../assets/styles/pages/realizacje.styles';
 import PopupImage from '../components/PopupImage/PopupImage';
+import ArrowUpRightIcon from '../assets/icons/ArrowUpRight.svg';
 
 function RealizacjePage({ data }) {
   const [isPopup, setIsPopup] = useState(false);
@@ -41,6 +44,14 @@ function RealizacjePage({ data }) {
           </ImageWrapper>
         ))}
       </Wrapper>
+      <ButtonWrapper>
+        <a href="www.facebook.com">
+          <StyledButton secondary>
+            Zobacz Wszystkie Realizacje
+            <ArrowUpRightIcon />
+          </StyledButton>
+        </a>
+      </ButtonWrapper>
     </MainTemplate>
   );
 }
