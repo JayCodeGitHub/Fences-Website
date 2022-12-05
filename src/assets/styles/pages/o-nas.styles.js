@@ -1,15 +1,8 @@
 import styled from "styled-components"
 
-export const Wrapper = styled.div`
-    width: 100%;
-    padding: 5vw;
-    ${({ theme }) => theme.mq.bigDesktop} {
-        padding: 2.5vw 12vw 2.5vw 12vw;
-    }
-`
-
 export const Section = styled.section`
     width: 100%;
+    padding: 5vw;
     margin: 10vw 0;
     ${({ theme }) => theme.mq.desktop} {
         height: 30vw;
@@ -21,7 +14,9 @@ export const Section = styled.section`
     }
     ${({ theme }) => theme.mq.bigDesktop} {
         margin: 50px 0;
-    }`
+        padding: 2.5vw 12vw 2.5vw 12vw;
+    }
+`
 
 export const Title = styled.h2`
     display: flex;

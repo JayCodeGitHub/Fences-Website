@@ -12,12 +12,14 @@ const ManufacturersSection = ({ title, items }) => {
       <Title>{title}</Title>
       <ImagesWrapper>
         {items.map(({ alt, image }) => (
-          <StyledImage
-            src={image.fluid.src}
-            srcSet={image.fluid.srcSet}
-            sizes={image.fluid.sizes}
-            alt={alt}
-          />
+          <a href="facebook.com">
+            <StyledImage
+              src={image.fluid.src}
+              srcSet={image.fluid.srcSet}
+              sizes={image.fluid.sizes}
+              alt={alt}
+            />
+          </a>
         ))}
       </ImagesWrapper>
     </Wrapper>

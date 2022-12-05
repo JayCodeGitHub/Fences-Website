@@ -5,7 +5,6 @@ import Header from '../components/Header/Header';
 import Hero from '../components/Hero/Hero';
 import ParagraphBar from '../components/ParagraphBar/ParagraphBar';
 import {
-  Wrapper,
   Section,
   Title,
   Paragraph,
@@ -23,33 +22,30 @@ function OnasPage({ data }) {
         title={data.datoCmsAbout.title}
         paragraph={data.datoCmsAbout.paragraph}
       />
-      <ParagraphBar value={data.datoCmsAbout.paragraphBar} />
-      <Wrapper>
-        {data.datoCmsAbout.about.map(
-          ({ __typename, image, title, paragraph, alt, manufacturers }, i) => {
-            switch (__typename) {
-              case 'DatoCmsSection':
-                return (
-                  <Section key={i}>
-                    <Title order={i}>{title}</Title>
-                    <Paragraph order={i}>{paragraph}</Paragraph>
-                    <Image
-                      src={image.fluid.src}
-                      srcSet={image.fluid.srcSet}
-                      sizes={image.fluid.sizes}
-                      order={i}
-                      alt={alt}
-                    />
-                  </Section>
-                );
-              case 'DatoCmsManufacturer':
-                return (
-                  <ManufacturersSection title={title} items={manufacturers} />
-                );
-            }
-          },
-        )}
-      </Wrapper>
+      {data.datoCmsAbout.about.map(
+        ({ __typename, image, title, paragraph, alt, manufacturers }, i) => {
+          switch (__typename) {
+            case 'DatoCmsSection':
+              return (
+                <Section key={i}>
+                  <Title order={i}>{title}</Title>
+                  <Paragraph order={i}>{paragraph}</Paragraph>
+                  <Image
+                    src={image.fluid.src}
+                    srcSet={image.fluid.srcSet}
+                    sizes={image.fluid.sizes}
+                    order={i}
+                    alt={alt}
+                  />
+                </Section>
+              );
+            case 'DatoCmsManufacturer':
+              return (
+                <ManufacturersSection title={title} items={manufacturers} />
+              );
+          }
+        },
+      )}
       <ParagraphBar secondary value={data.datoCmsAbout.paragraphBarSecondary} />
     </MainTemplate>
   );
@@ -68,7 +64,6 @@ export const query = graphql`
           sizes
         }
       }
-      paragraphBar
       paragraphBarSecondary
       about {
         ... on DatoCmsManufacturer {
