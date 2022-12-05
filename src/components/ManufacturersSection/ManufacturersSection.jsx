@@ -1,10 +1,25 @@
 import React from 'react';
-import { Wrapper } from './ManufacturersSection.styles';
+import {
+  Wrapper,
+  Title,
+  StyledImage,
+  ImagesWrapper,
+} from './ManufacturersSection.styles';
 
-const ManufacturersSection = () => {
+const ManufacturersSection = ({ title, items }) => {
   return (
     <Wrapper>
-      <h1>ManufacturersSection</h1>
+      <Title>{title}</Title>
+      <ImagesWrapper>
+        {items.map(({ alt, image }) => (
+          <StyledImage
+            src={image.fluid.src}
+            srcSet={image.fluid.srcSet}
+            sizes={image.fluid.sizes}
+            alt={alt}
+          />
+        ))}
+      </ImagesWrapper>
     </Wrapper>
   );
 };

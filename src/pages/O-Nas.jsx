@@ -11,9 +11,9 @@ import {
   Paragraph,
   Image,
 } from '../assets/styles/pages/o-nas.styles';
+import ManufacturersSection from '../components/ManufacturersSection/ManufacturersSection';
 
 function OnasPage({ data }) {
-  console.log(data.datoCmsAbout.about);
   return (
     <MainTemplate>
       <Header title="O Nas" />
@@ -26,7 +26,7 @@ function OnasPage({ data }) {
       <ParagraphBar value={data.datoCmsAbout.paragraphBar} />
       <Wrapper>
         {data.datoCmsAbout.about.map(
-          ({ __typename, image, title, paragraph, alt }, i) => {
+          ({ __typename, image, title, paragraph, alt, manufacturers }, i) => {
             switch (__typename) {
               case 'DatoCmsSection':
                 return (
@@ -43,7 +43,9 @@ function OnasPage({ data }) {
                   </Section>
                 );
               case 'DatoCmsManufacturer':
-                return <h1>Dostawcy</h1>;
+                return (
+                  <ManufacturersSection title={title} items={manufacturers} />
+                );
             }
           },
         )}
@@ -74,13 +76,11 @@ export const query = graphql`
           title
           manufacturers {
             alt
-            ... on DatoCmsImage {
-              image {
-                fluid(maxWidth: 800, maxHeight: 1200) {
-                  src
-                  srcSet
-                  sizes
-                }
+            image {
+              fluid(maxWidth: 800, maxHeight: 1200) {
+                src
+                srcSet
+                sizes
               }
             }
           }
