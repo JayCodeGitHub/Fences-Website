@@ -7,6 +7,7 @@ import Title from '../components/Title/Title.styles';
 import StepsSection from '../components/StepsSection/StepsSection';
 import Paragraph from '../components/Paragraph/Paragraph';
 import GridSection from '../components/GridSection/GridSection';
+import ManufacturersSection from '../components/ManufacturersSection/ManufacturersSection';
 
 function IndexPage({ data }) {
   return (
@@ -19,7 +20,16 @@ function IndexPage({ data }) {
         alt={data.datoCmsHomepage.alt}
       />
       {data.datoCmsHomepage.homepage.map(
-        ({ __typename, title, grid, paragraph, steps, href, button }) => {
+        ({
+          __typename,
+          title,
+          grid,
+          paragraph,
+          steps,
+          href,
+          button,
+          manufacturers,
+        }) => {
           switch (__typename) {
             case 'DatoCmsTitle':
               return <Title>{title}</Title>;
@@ -55,6 +65,10 @@ function IndexPage({ data }) {
                   background={({ theme }) => theme.grey}
                 />
               );
+            case 'DatoCmsManufacturer':
+              return (
+                <ManufacturersSection title={title} items={manufacturers} />
+              );
           }
         },
       )}
@@ -77,6 +91,20 @@ export const query = graphql`
         }
       }
       homepage {
+        ... on DatoCmsManufacturer {
+          __typename
+          title
+          manufacturers {
+            alt
+            image {
+              fluid(maxWidth: 800, maxHeight: 1200) {
+                src
+                srcSet
+                sizes
+              }
+            }
+          }
+        }
         ... on DatoCmsTitle {
           __typename
           title
