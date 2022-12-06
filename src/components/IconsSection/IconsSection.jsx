@@ -1,5 +1,12 @@
 import React from 'react';
-import { Wrapper } from './IconsSection.styles';
+import {
+  Paragraph,
+  Title,
+  Wrapper,
+  Icon,
+  IconsWrapper,
+  IconWrapper,
+} from './IconsSection.styles';
 
 const IconsSection = ({
   title,
@@ -13,7 +20,22 @@ const IconsSection = ({
 }) => {
   return (
     <Wrapper>
-      <h1>IconsSection</h1>
+      <Title>{title}</Title>
+      <Paragraph>{paragraph}</Paragraph>
+      <IconsWrapper>
+        <IconWrapper>
+          <Icon src={iconone.url} />
+          <h3>{signatureone}</h3>
+        </IconWrapper>
+        <IconWrapper>
+          <Icon src={icontwo.url} />
+          <h3>{signaturetwo}</h3>
+        </IconWrapper>
+        <IconWrapper>
+          <Icon src={iconthree.url} />
+          <h3>{signaturethree}</h3>
+        </IconWrapper>
+      </IconsWrapper>
     </Wrapper>
   );
 };

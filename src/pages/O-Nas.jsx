@@ -24,7 +24,23 @@ function OnasPage({ data }) {
         paragraph={data.datoCmsAbout.paragraph}
       />
       {data.datoCmsAbout.about.map(
-        ({ __typename, image, title, paragraph, alt, manufacturers }, i) => {
+        (
+          {
+            __typename,
+            image,
+            title,
+            paragraph,
+            alt,
+            manufacturers,
+            iconone,
+            signatureone,
+            icontwo,
+            signaturetwo,
+            iconthree,
+            signaturethree,
+          },
+          i,
+        ) => {
           switch (__typename) {
             case 'DatoCmsSection':
               return (
@@ -45,7 +61,18 @@ function OnasPage({ data }) {
                 <ManufacturersSection title={title} items={manufacturers} />
               );
             case 'DatoCmsIconssecion':
-              return <IconsSection />;
+              return (
+                <IconsSection
+                  title={title}
+                  paragraph={paragraph}
+                  iconone={iconone}
+                  signatureone={signatureone}
+                  icontwo={icontwo}
+                  signaturetwo={signaturetwo}
+                  iconthree={iconthree}
+                  signaturethree={signaturethree}
+                />
+              );
           }
         },
       )}
