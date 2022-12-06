@@ -21,7 +21,6 @@ export const Wrapper = styled.div`
     ${({ theme }) => theme.mq.desktop} {
         padding: 0vw 10vw;
         flex-direction: row;
-        height: 20rem;
     }
 `
 
