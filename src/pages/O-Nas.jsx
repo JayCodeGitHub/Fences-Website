@@ -11,6 +11,7 @@ import {
   Image,
 } from '../assets/styles/pages/o-nas.styles';
 import ManufacturersSection from '../components/ManufacturersSection/ManufacturersSection';
+import IconsSection from '../components/IconsSection/IconsSection';
 
 function OnasPage({ data }) {
   return (
@@ -43,6 +44,8 @@ function OnasPage({ data }) {
               return (
                 <ManufacturersSection title={title} items={manufacturers} />
               );
+            case 'DatoCmsIconssecion':
+              return <IconsSection />;
           }
         },
       )}
@@ -66,6 +69,23 @@ export const query = graphql`
       }
       paragraphBarSecondary
       about {
+        ... on DatoCmsIconssecion {
+          __typename
+          title
+          paragraph
+          iconone {
+            url
+          }
+          signatureone
+          icontwo {
+            url
+          }
+          signaturetwo
+          iconthree {
+            url
+          }
+          signaturethree
+        }
         ... on DatoCmsManufacturer {
           __typename
           title
