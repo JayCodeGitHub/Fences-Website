@@ -183,5 +183,5 @@ export const query = graphql`
 export default IndexPage;
 
 export function Head() {
-  return <title>Ogrodzenia</title>;
+  return <title>Ogrodzenia Agro 78</title>;
 }

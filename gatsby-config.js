@@ -25,6 +25,15 @@ module.exports = {
     },
   },
   {
+    resolve: 'gatsby-plugin-manifest',
+    options: {
+      short_name: 'Agro 78',
+      start_url: '/',
+      display: 'standalone',
+      icon: 'src/assets/images/Logo-Secondary.png',
+    },
+  },
+  {
     resolve: 'gatsby-plugin-react-svg',
     options: {
       rule: {

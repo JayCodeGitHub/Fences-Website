@@ -65,6 +65,10 @@ export const LogoWrapper = styled.span`
     ${({ theme }) => theme.mq.desktop} {
         font-size: ${({ theme }) => theme.font.size.s};
     }
+    height: 100%;
+    img {
+        height: 100%;
+    }
 `
 
 export const StyledNavigation = styled.ul`

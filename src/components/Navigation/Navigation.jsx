@@ -15,6 +15,7 @@ import {
 import { NavigationItems } from '../../assets/items/NavigationItems/NavigationItems';
 import PhoneIcon from '../../assets/icons/PhoneIcon.svg';
 import MailIcon from '../../assets/icons/MailIcon.svg';
+import Logo from '../../assets/images/Logo.png';
 
 function Navigation() {
   const data = useStaticQuery(graphql`
@@ -40,7 +41,9 @@ function Navigation() {
       </ContactItemsWrapper>
       <Wrapper>
         <LogoWrapper onClick={() => setIsOpen(false)}>
-          <Link to="/">Logo</Link>
+          <Link to="/">
+            <img src={Logo} />
+          </Link>
         </LogoWrapper>
         <StyledNavigation>
           {NavigationItems.map(({ name, href }, i) => (
