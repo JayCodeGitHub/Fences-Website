@@ -18,9 +18,12 @@ export const Wrapper = styled.section`
     h3 {
         color: ${({ theme }) => theme.primary};
         font-size: ${({ theme }) => theme.font.size.m};
+        ${({ theme }) => theme.mq.desktop} {
+        margin: 0;
+    }
     }
     h4 {
-        font-size: ${({ theme }) => theme.font.size.s};
+        font-size: ${({ theme }) => theme.font.size.xs};
         text-align: center;
     }
     p {
