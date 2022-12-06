@@ -96,6 +96,7 @@ export const query = graphql`
           title
           manufacturers {
             alt
+            link
             image {
               fluid(maxWidth: 800, maxHeight: 1200) {
                 src

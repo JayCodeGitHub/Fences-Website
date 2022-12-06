@@ -22,6 +22,7 @@ const Paragraph = styled.p`
   }
   ${({ theme }) => theme.mq.bigDesktop} {
     padding: 2vw 12vw 2vw 12vw;
+    font-size: ${({ theme }) => theme.font.size.s};
   }
 `;
 
