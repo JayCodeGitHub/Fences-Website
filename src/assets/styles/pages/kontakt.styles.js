@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
     align-items: center;
     ${({ theme }) => theme.mq.desktop} {
         flex-direction: row;
-        height: 60vh;
+        height: 70vh;
     }
     ${({ theme }) => theme.mq.bigDesktop} {
         padding: 0 12vw 2rem 12vw;
@@ -100,7 +100,7 @@ export const MapWrapper = styled.div`
     height: 40vh;
     ${({ theme }) => theme.mq.desktop} {
         height: 100%;
-        width: 40%;
+        width: 45%;
     }
     iframe {
         width: 100%;

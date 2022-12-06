@@ -45,7 +45,7 @@ function RealizacjePage({ data }) {
         ))}
       </Wrapper>
       <ButtonWrapper>
-        <a href="www.facebook.com">
+        <a href={data.datoCmsGallery.gallery} target="_blank">
           <StyledButton secondary>
             Zobacz Wszystkie Realizacje
             <ArrowUpRightIcon />
@@ -59,6 +59,7 @@ function RealizacjePage({ data }) {
 export const query = graphql`
   query {
     datoCmsGallery {
+      gallery
       images {
         id
         alt

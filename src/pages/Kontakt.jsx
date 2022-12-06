@@ -8,11 +8,11 @@ import {
   ContactItem,
   CompanyData,
   MapWrapper,
-  StyledMap,
 } from '../assets/styles/pages/kontakt.styles';
 import PhoneIcon from '../assets/icons/PhoneIcon.svg';
 import MailIcon from '../assets/icons/MailIcon.svg';
 import FacebookIcon from '../assets/icons/FacebookIcon.svg';
+import InstagramIcon from '../assets/icons/InstagramIcon.svg';
 import ParagraphBar from '../components/ParagraphBar/ParagraphBar';
 
 function KontaktPage({ data }) {
@@ -39,7 +39,13 @@ function KontaktPage({ data }) {
           <a href={data.datoCmsContact.facebook} target="_blank">
             <ContactItem>
               <FacebookIcon className="fill" />
-              <p>facebook</p>
+              <p>Facebook</p>
+            </ContactItem>
+          </a>
+          <a href={data.datoCmsContact.instagram} target="_blank">
+            <ContactItem>
+              <InstagramIcon className="fill" />
+              <p>Instagram</p>
             </ContactItem>
           </a>
           <CompanyData>
@@ -72,6 +78,7 @@ export const query = graphql`
       regon
       paragraphBarSecondary
       facebook
+      instagram
       map
     }
   }
