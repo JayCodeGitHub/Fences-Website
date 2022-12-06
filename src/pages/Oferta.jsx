@@ -10,7 +10,6 @@ import {
 } from '../assets/styles/pages/oferta.styles';
 
 function OfertaPage({ data }) {
-  console.log(data);
   return (
     <MainTemplate>
       <Header title="Oferta" />

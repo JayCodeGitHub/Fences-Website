@@ -11,8 +11,8 @@ const ManufacturersSection = ({ title, items }) => {
     <Wrapper>
       <Title>{title}</Title>
       <ImagesWrapper>
-        {items.map(({ alt, image }) => (
-          <a href="facebook.com">
+        {items.map(({ alt, image }, i) => (
+          <a href="facebook.com" key={i}>
             <StyledImage
               src={image.fluid.src}
               srcSet={image.fluid.srcSet}
