@@ -30,7 +30,7 @@ module.exports = {
       short_name: 'Agro 78',
       start_url: '/',
       display: 'standalone',
-      icon: 'src/assets/images/Logo-Secondary.png',
+      icon: 'src/assets/images/Logo.png',
     },
   },
   {
